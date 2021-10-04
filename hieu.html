@@ -1,0 +1,1736 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="utf-8"><script >var _wpmeteor={"rdelay":1000,"elementor-animations":true,"elementor-pp":true,"v":"2.2.2"};</script><script >if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]wpmeteordisable/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?wpmeteordisable=1"}else{document.location.href=href.replace("#","?wpmeteordisable=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&wpmeteordisable=1"}else{document.location.href=href.replace("#","&wpmeteordisable=1#")}}}}</script><script >!function(t){var e={};function n(r){if(e[r])return e[r].exports;var o=e[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=t,n.c=e,n.d=function(t,e,r){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:r})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var o in t)n.d(r,o,function(e){return t[e]}.bind(null,o));return r},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="/",n(n.s=0)}([function(t,e,n){t.exports=n(1)},function(t,e,n){"use strict";n.r(e);var r=new(function(){function t(){this.l=[]}var e=t.prototype;return e.emit=function(t,e){void 0===e&&(e=null),this.l[t]&&this.l[t].forEach((function(t){return t(e)}))},e.on=function(t,e){var n;(n=this.l)[t]||(n[t]=[]),this.l[t].push(e)},e.off=function(t,e){this.l[t]=(this.l[t]||[]).filter((function(t){return t!==e}))},t}()),o=new Date,i=function(){function t(){}return t.prototype.init=function(){var t,e=!1,n=function(t){if(!e&&t&&t.fn&&!t.__wpmeteor){var n=function(e){return document.addEventListener("DOMContentLoaded",(function(n){e.bind(document)(t,n)})),this};t.fn.ready=n,t.fn.init.prototype.ready=n,t.__wpmeteor=!0}return t};window.jQuery&&(t=n(window.jQuery)),Object.defineProperty(window,"jQuery",{get:function(){return t},set:function(e){return t=n(e)}}),r.on("l",(function(){return e=!0}))},t}(),a={};!function(t,e){try{var n=Object.defineProperty({},e,{get:function(){a[e]=!0}});t.addEventListener(e,null,n),t.removeEventListener(e,null,n)}catch(t){}}(window,"passive");var c=a,u=window,f=document,d="DOMContentLoaded",l=["mouseover","keydown","touchmove","touchend","wheel"],s=["mouseover","mouseout","touchstart","touchmove","touchend","click"],p="data-wpmeteor-",v=function(){function t(){}return t.prototype.init=function(t){var e=!1,n=!1,o=function t(o){e||(e=!0,l.forEach((function(e){return f.body.removeEventListener(e,t,c)})),clearTimeout(n),location.href.match(/wpmeteornopreload/)||r.emit("pre"),r.emit("fi"))},i=function(t){var e=new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0});return Object.defineProperty(e,"target",{writable:!1,value:t.target}),e};t<=2e3&&r.on("i",(function(){e||(n=setTimeout(o,t))}));var a=[],v=function(t){t.target&&"dispatchEvent"in t.target&&("click"===t.type?(t.preventDefault(),t.stopPropagation(),a.push(i(t))):"touchmove"!==t.type&&a.push(t),t.target.setAttribute(p+t.type,!0))};r.on("l",(function(){var t;for(s.forEach((function(t){return u.removeEventListener(t,v)}));t=a.shift();){var e=t.target;e.getAttribute(p+"touchstart")&&e.getAttribute(p+"touchend")&&!e.getAttribute(p+"click")?(e.getAttribute(p+"touchmove")||(e.removeAttribute(p+"touchmove"),a.push(i(t))),e.removeAttribute(p+"touchstart"),e.removeAttribute(p+"touchend")):e.removeAttribute(p+t.type),e.dispatchEvent(t)}}));f.addEventListener(d,(function t(){l.forEach((function(t){return f.body.addEventListener(t,o,c)})),s.forEach((function(t){return u.addEventListener(t,v)})),f.removeEventListener(d,t)}))},t}(),m=document,h=m.createElement("span");h.setAttribute("id","elementor-device-mode"),h.setAttribute("class","elementor-screen-only");var y=window,b=document,g=b.documentElement,w=function(t){return t.getAttribute("class")||""},E=function(t,e){return t.setAttribute("class",e)},L=function(){window.addEventListener("load",(function(){var t=(m.body.appendChild(h),getComputedStyle(h,":after").content.replace(/"/g,"")),e=Math.max(g.clientWidth||0,y.innerWidth||0),n=Math.max(g.clientHeight||0,y.innerHeight||0),o=["_animation_"+t,"animation_"+t,"_animation","_animation","animation"];Array.from(b.querySelectorAll(".elementor-invisible")).forEach((function(t){var i=t.getBoundingClientRect();if(i.top+y.scrollY<=n&&i.left+y.scrollX<e)try{var a=JSON.parse(t.getAttribute("data-settings"));if(a.trigger_source)return;for(var c,u=a._animation_delay||a.animation_delay||0,f=0;f<o.length;f++)if(a[o[f]]){o[f],c=a[o[f]];break}if(c){var d=w(t),l="none"===c?d:d+" animated "+c,s=setTimeout((function(){E(t,l.replace(/\belementor\-invisible\b/,"")),o.forEach((function(t){return delete a[t]})),t.setAttribute("data-settings",JSON.stringify(a))}),u);r.on("fi",(function(){clearTimeout(s),E(t,w(t).replace(new RegExp("\b"+c+"\b"),""))}))}}catch(t){console.error(t)}}))}))},A=document,S="querySelectorAll",_="data-in-mega_smartmenus",O="DOMContentLoaded",j="readystatechange",P=console.error;!function(t,e,n,a,c,u,f,d,l){var s=t.constructor.name+"::",p=e.constructor.name+"::",m=function(e,n){n=n||t;for(var r=0;r<this.length;r++)e.call(n,this[r],r,this)};"NodeList"in t&&!NodeList.prototype.forEach&&(NodeList.prototype.forEach=m),"HTMLCollection"in t&&!HTMLCollection.prototype.forEach&&(HTMLCollection.prototype.forEach=m),_wpmeteor["elementor-animations"]&&L(),_wpmeteor["elementor-pp"]&&function(){var t=A.createElement("div");t.innerHTML='<span class="sub-arrow --wp-meteor"><i class="fa" aria-hidden="true"></i></span>';var e=t.firstChild;A.addEventListener("DOMContentLoaded",(function(){Array.from(A[S](".pp-advanced-menu ul")).forEach((function(t){if(!t.getAttribute(_)){(t.getAttribute("class")||"").match(/\bmega\-menu\b/)&&t[S]("ul").forEach((function(t){t.setAttribute(_,!0)}));var n=function(t){for(var e=[];t=t.previousElementSibling;)e.push(t);return e}(t),r=n.filter((function(t){return t})).filter((function(t){return"A"===t.tagName})).pop();if(r||(r=n.map((function(t){return Array.from(t[S]("a"))})).filter((function(t){return t})).flat().pop()),r){var o=e.cloneNode(!0);r.appendChild(o),new MutationObserver((function(t){t.forEach((function(t){t.addedNodes.forEach((function(t){if(1===t.nodeType&&"SPAN"===t.tagName)try{r.removeChild(o)}catch(t){}}))}))})).observe(r,{childList:!0})}}}))}))}();var h,y,b=[],g=[],w=[],E={},C=!1,T=!1,k=setTimeout;var x=e[n].bind(e),M=e[a].bind(e),N=t[n].bind(t),R=t[a].bind(t);"undefined"!=typeof EventTarget&&(h=EventTarget.prototype.addEventListener,y=EventTarget.prototype.removeEventListener,x=h.bind(e),M=y.bind(e),N=h.bind(t),R=y.bind(t));var H,z=e.createElement.bind(e),D=e.__proto__.__lookupGetter__("readyState").bind(e);Object.defineProperty(e,"readyState",{get:function(){return H||D()},set:function(t){return H=t}});var q=function(t){return t.filter((function(t){return[s,p].filter((function(e){return(E[e+t]||[]).length})).length})).length},Q={},W=function(){var t=[];w.forEach((function(n){var r=n[0],o=n[1],i=n[2];i||(i=r.target);try{var a=i.constructor.name+"::"+r.type;if((E[a]||[]).length){e.readyState=o;for(var c=0;c<E[a].length;c++){var u=E[a][c],f=a+"::"+c+"::"+o;if(!Q[f]){Q[f]=!0;try{u.hasOwnProperty("prototype")&&u.prototype.constructor!==u?u(r):u.bind(i)(r)}catch(t){P(t,u)}}}t.push(a),e.readyState=D()}}catch(t){P(t)}})),t.forEach((function(t){delete E[t]}))};x(O,(function(t){w.push([t,e.readyState,e])})),x(j,(function(t){w.push([t,e.readyState,e])})),N(O,(function(n){w.push([n,e.readyState,t])})),N(d,(function(n){w.push([n,e.readyState,t])})),r.on("fi",(function(){T=!0,B=!0,k(I)}));N(d,(function t(){C=!0,T&&!B&&k(I),R(d,t)})),(new v).init(_wpmeteor.rdelay);var B=!1,I=function e(){var n=b.shift();if(n)if(n[c]("data-src"))n.hasAttribute("async")?(G(n),k(e)):G(n,e);else if("javascript/blocked"==n.type)G(n),k(e);else if(n.hasAttribute("data-wpmeteor-onload")){var o=n[c]("data-wpmeteor-onload");try{new Function(o).call(n)}catch(t){P(t)}k(e)}else k(e);else if(q([O,j]))W(),k(e);else if(T&&C)if(q([d]))W(),k(e);else{if(t.RocketLazyLoadScripts)try{RocketLazyLoadScripts.run()}catch(t){P(t)}setTimeout((function(){return r.emit("l")}))}else B=!1},J=function(t){for(var n=e.createElement("SCRIPT"),r=t.attributes,o=r.length-1;o>=0;o--)n.setAttribute(r[o].name,r[o].value);return n.bypass=!0,n.type="text/javascript",(t.text||"").match(/^\s*class RocketLazyLoadScripts/)?n.text=t.text.replace(/^\s*class RocketLazyLoadScripts/,"window.RocketLazyLoadScripts=class").replace("RocketLazyLoadScripts.run();",""):n.text=t.text,n[f]("data-wpmeteor-after"),n},F=function(t,e){var n=t.parentNode;n&&n.replaceChild(e,t)},G=function(t,e){if(t[c]("data-src")){var r=J(t),o=h?h.bind(r):r[n].bind(r);if(e){var i=function(){return k(e)};o(d,i),o(l,i)}r.src=t[c]("data-src"),r[f]("data-src"),F(t,r)}else"javascript/blocked"===t.type?F(t,J(t)):onLoad&&onLoad()};e[n]=function(t,e){if(e&&(t===O||t===j)){var n=p+t;return E[n]=E[n]||[],void E[n].push(e)}for(var r=arguments.length,o=new Array(r>2?r-2:0),i=2;i<r;i++)o[i-2]=arguments[i];return x.apply(void 0,[t,e].concat(o))},e[a]=function(t,e){if(t===O){var n=p+t;E[n]=(E[n]||[]).filter((function(t){return t!==e}))}return M(t,e)},r.on("pre",(function(){return b.forEach((function(t){var n=t[c]("data-src");if(n){var r=z("link");r.rel="pre"+d,r.as="script",r.href=n,r.crossorigin=!0,e.head.appendChild(r)}}))})),x(O,(function(){e.querySelectorAll("script[data-wpmeteor-after]").forEach((function(t){return b.push(t)}));var t=["link"].map((function(t){return t+"[data-wpmeteor-onload]"})).join(",");e.querySelectorAll(t).forEach((function(t){return b.push(t)})),e.querySelectorAll("iframe[data-wpmeteor-after]").forEach((function(t){return g.push(t)}))})),(new i).init(),r.on("l",(function(){g.forEach((function(t){t.src=t[c]("data-src")}))}));var X=function(t){e.currentScript?e.currentScript.insertAdjacentHTML("afterend",t):P((new Date-o)/1e3,"document.currentScript not set",t)};Object.defineProperty(e,"write",{get:function(){return X},set:function(t){return X=t}}),t[n]=function(t,e){if(e&&(t===d||t===O)){var n=t===O?p+t:s+t;return E[n]=E[n]||[],void E[n].push(e)}for(var r=arguments.length,o=new Array(r>2?r-2:0),i=2;i<r;i++)o[i-2]=arguments[i];return N.apply(void 0,[t,e].concat(o))},t[a]=function(t,e){if(t===d){var n=t===O?p+t:s+t;E[n]=(E[n]||[]).filter((function(t){return t!==e}))}return R(t,e)},function(){var n,r=s+"load";E[r]=E[r]||[],E[r].push((function(){n&&n()}));var o={get:function(){return n},set:function(t){return n=t}};Object.defineProperty(t,"onload",o),x(O,(function(){Object.defineProperty(e.body,"onload",o)}))}();var Y=1,K=function(){--Y||r.emit("i")};N(d,(function t(){k((function(){e.querySelectorAll("img").forEach((function(t){if(!t.complete&&(t.currentSrc||t.src)&&"lazy"==!(t.loading||"").toLowerCase()||(r=t.getBoundingClientRect(),o=window.innerHeight||document.documentElement.clientHeight,i=window.innerWidth||document.documentElement.clientWidth,r.top>=-1*o*1&&r.left>=-1*i*1&&r.bottom<=2*o&&r.right<=2*i)){var e=new Image;e[n](d,K),e[n](l,K),e.src=t.currentSrc||t.src,Y++}var r,o,i})),K()})),R(d,t)}));var U=Object.defineProperty;Object.defineProperty=function(n,r,o){return n===t&&["jQuery","onload"].indexOf(r)>=0||(n===e||n===e.body)&&["readyState","write"].indexOf(r)>=0?n:U(n,r,o)},Object.defineProperties=function(t,e){for(var n in e)Object.defineProperty(t,n,e[n]);return t}}(window,document,"addEventListener","removeEventListener","getAttribute",0,"removeAttribute","load","error")}]);
+</script><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name='robots' content='max-image-preview:large' />
+	<link as="font" crossorigin="" data-wpacu-preload-font="1" href="/wp-content/plugins/elementor/assets/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0" rel="preload" />
+	<link as="font" crossorigin="" data-wpacu-preload-font="1" href="/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.9.1" rel="preload" /><!-- This site is optimized with the Yoast SEO Premium plugin v15.7 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>IELTS Thanh Loan</title>
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link href="https://ielts-thanhloan.com/" rel="canonical" /><meta property="og:locale" content="vi_VN" /><meta property="og:type" content="website" /><meta property="og:title" content="IELTS Thanh Loan" /><meta property="og:description" content="Chỉ từ 1.2 triệu để đạt IELTS 6.0+ĐĂNG KÝ LỘ TRÌNH HỌC ONLINE TOÀN DIỆN Khoá học phù hợp cho mọi đối tượng từ band 0-6.5+, gồm có: Ngữ pháp quan trọng cho IELTS – Từ vựng IELTS theo chủ đề – IELTS 4 kỹ năng từ cơ bản đến nâng cao. SIÊU TIẾT KIỆM [&hellip;]" /><meta property="og:url" content="https://ielts-thanhloan.com/" /><meta property="og:site_name" content="IELTS Thanh Loan" /><meta property="article:publisher" content="https://www.facebook.com/IELTSThanhLoan/" /><meta property="article:modified_time" content="2021-08-09T03:01:53+00:00" /><meta property="og:image" content="https://ielts-thanhloan.com/wp-content/uploads/2021/04/f93d41844806ba58e317.jpg" /><meta property="og:image:width" content="660" /><meta property="og:image:height" content="660" /><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://ielts-thanhloan.com/#organization","name":"IELTS Thanh Loan","url":"https://ielts-thanhloan.com/","sameAs":["https://www.facebook.com/IELTSThanhLoan/","https://www.youtube.com/IELTSThanhLoan","https://twitter.com/IELTSThanhLoan"],"logo":{"@type":"ImageObject","@id":"https://ielts-thanhloan.com/#logo","inLanguage":"vi","url":"https://ielts-thanhloan.com/wp-content/uploads/2019/11/logo_ieltsthanhloan.png","width":540,"height":180,"caption":"IELTS Thanh Loan"},"image":{"@id":"https://ielts-thanhloan.com/#logo"}},{"@type":"WebSite","@id":"https://ielts-thanhloan.com/#website","url":"https://ielts-thanhloan.com/","name":"IELTS Thanh Loan","description":"Blog chia s\u1ebb th\u00f4ng tin, ki\u1ebfn th\u1ee9c IELTS","publisher":{"@id":"https://ielts-thanhloan.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://ielts-thanhloan.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"vi"},{"@type":"ImageObject","@id":"https://ielts-thanhloan.com/#primaryimage","inLanguage":"vi","url":"https://ielts-thanhloan.com/wp-content/uploads/2021/04/f93d41844806ba58e317.jpg","width":660,"height":660},{"@type":"WebPage","@id":"https://ielts-thanhloan.com/#webpage","url":"https://ielts-thanhloan.com/","name":"IELTS Thanh Loan","isPartOf":{"@id":"https://ielts-thanhloan.com/#website"},"about":{"@id":"https://ielts-thanhloan.com/#organization"},"primaryImageOfPage":{"@id":"https://ielts-thanhloan.com/#primaryimage"},"datePublished":"2021-04-14T02:25:59+00:00","dateModified":"2021-08-09T03:01:53+00:00","inLanguage":"vi","potentialAction":[{"@type":"ReadAction","target":["https://ielts-thanhloan.com/"]}]}]}</script><!-- / Yoast SEO Premium plugin. -->
+	<link href="//use.fontawesome.com" rel="dns-prefetch" />
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/themes/paradise/style-2acd2d5abc4188364a8a0194ac1d14b3.css" id="paradise-css" media="all" rel="stylesheet" type="text/css" />
+	<style id="paradise-inline-css" type="text/css">::-moz-selection,
+		::selection,
+		.genesis-nav-menu li.highlight a {
+		       background-color: #00636b;
+		}
+		
+		a,
+		.entry-content a,
+		.footer-widgets a {
+		       color: #00636b;
+		}
+		
+		.archive-description,
+		.author-box {
+		       border: 2px solid #00636b;
+		}
+		
+		
+		
+		.nav-primary .genesis-nav-menu .sub-menu a,
+		.nav-secondary .genesis-nav-menu .sub-menu a {
+                       background-color: #00636b;
+                }
+	</style>
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/addon-elements-for-elementor-page-builder/assets/css/eae.min.css?ver=1.0" id="eae-css-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=1.0" id="font-awesome-4-shim-css" media="all" rel="stylesheet" type="text/css" />
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/cache/asset-cleanup/css/item/font-awesome-5-all-vc6183d6fd049cf20c6b9e4cf9907c3499ae36b6c-df18683e8cdb1ed451c9dbde4c86ed9a.css" id="font-awesome-5-all-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/addon-elements-for-elementor-page-builder/assets/lib/vegas/vegas.min.css?ver=1.0" id="vegas-css-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="//ielts-thanhloan.com/wp-content/plugins/sfwd-lms/themes/legacy/templates/learndash_quiz_front.min.css?ver=3.4.0.7" id="learndash_quiz_front_css-css" media="all" rel="stylesheet" type="text/css" />
+	<style data-wpacu-inline-css-file="1" type="text/css">.jq-dropdown{position:absolute;z-index:1039;display:none}.jq-dropdown .jq-dropdown-menu,.jq-dropdown .jq-dropdown-panel{min-width:160px;max-width:360px;list-style:none;background:#fff;border:1px solid #ddd;border-radius:4px;box-shadow:0 5px 10px rgba(0,0,0,.2);overflow:visible;padding:4px 0;margin:0}.jq-dropdown .jq-dropdown-panel{padding:10px}.jq-dropdown.jq-dropdown-tip{margin-top:8px}.jq-dropdown.jq-dropdown-tip:before{position:absolute;top:-6px;left:9px;content:"";border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:7px solid #ddd;display:inline-block}.jq-dropdown.jq-dropdown-tip:after{position:absolute;top:-5px;left:10px;content:"";border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:6px solid #fff;display:inline-block}.jq-dropdown.jq-dropdown-tip.jq-dropdown-anchor-right:before{left:auto;right:9px}.jq-dropdown.jq-dropdown-tip.jq-dropdown-anchor-right:after{left:auto;right:10px}.jq-dropdown.jq-dropdown-scroll .jq-dropdown-menu,.jq-dropdown.jq-dropdown-scroll .jq-dropdown-panel{max-height:180px;overflow:auto}.jq-dropdown .jq-dropdown-menu li{list-style:none;padding:0;margin:0;line-height:18px}.jq-dropdown .jq-dropdown-menu label,.jq-dropdown .jq-dropdown-menu li>a{display:block;color:inherit;text-decoration:none;line-height:18px;padding:3px 15px;margin:0;white-space:nowrap}.jq-dropdown .jq-dropdown-menu label:hover,.jq-dropdown .jq-dropdown-menu li>a:hover{background-color:#f2f2f2;color:inherit;cursor:pointer}.jq-dropdown .jq-dropdown-menu .jq-dropdown-divider{font-size:1px;border-top:1px solid #e5e5e5;padding:0;margin:5px 0}
+	</style>
+	<style data-wpacu-inline-css-file="1" type="text/css">body.learndash-cpt.learndash-embed-responsive .ld-video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}body.learndash-cpt.learndash-embed-responsive .ld-video div.wp-video,body.learndash-cpt.learndash-embed-responsive .ld-video embed,body.learndash-cpt.learndash-embed-responsive .ld-video iframe,body.learndash-cpt.learndash-embed-responsive .ld-video object,body.learndash-cpt.learndash-embed-responsive .ld-video video{top:0;left:0;width:100%!important;height:100%}body.learndash-cpt.learndash-embed-responsive .ld-video iframe{position:absolute}body.learndash-cpt.learndash-embed-responsive .ld-video[data-video-provider=vooplayer] iframe{position:unset}body.learndash-cpt.learndash-embed-responsive .ld-video[data-video-provider=vooplayer] .spotlightr-id iframe{position:absolute}body.learndash-cpt.learndash-embed-responsive .mejs-container.mejs-video,body.learndash-cpt.learndash-embed-responsive .mejs-overlay.mejs-video.load,body.learndash-cpt.learndash-embed-responsive .wp-video,body.learndash-cpt.learndash-embed-responsive video.wp-video-shortcode{width:100%!important;height:100%!important}body.learndash-cpt.learndash-embed-responsive .mejs-container.mejs-video{padding-top:56.25%}body.learndash-cpt.learndash-embed-responsive .wp-video,body.learndash-cpt.learndash-embed-responsive video.wp-video-shortcode{max-width:100%!important}body.learndash-cpt.learndash-embed-responsive video.wp-video-shortcode{position:relative}body.learndash-cpt.learndash-embed-responsive .mejs-container.mejs-video .mejs-mediaelement{position:absolute;top:0;right:0;bottom:0;left:0}body.learndash-cpt.learndash-embed-responsive .mejs-container.mejs-video .mejs-overlay-play{top:0;right:0;bottom:0;left:0;width:auto!important;height:auto!important}
+	</style>
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/cache/asset-cleanup/css/item/learndash-front-v2715e71bb76814da66a8bb85efd56fac80c7ed67-fbf06298ea03aaa9f87be31f6a62601d.css" id="learndash-front-css" media="all" rel="stylesheet" type="text/css" />
+	<style id="learndash-front-inline-css" type="text/css">.learndash-wrapper .ld-focus .ld-focus-main .ld-focus-content {
+			max-width: inherit;
+		}
+	</style>
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/woocommerce/assets/css/woocommerce-layout-bf4f55dcab7b8bf61914adbe1a587301.css" id="woocommerce-layout-css" media="all" rel="stylesheet" type="text/css" />
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen-9d3109423405c368a02e70634c0aa2cf.css" id="woocommerce-smallscreen-css" media="only screen and (max-width: 1023px)" rel="stylesheet" type="text/css" />
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/cache/asset-cleanup/css/item/woocommerce-general-v41aa7c461a19546ad27295f822d373a1f1dc4008-f48938fe01f74f074d646f67fc6a2a3b.css" id="woocommerce-general-css" media="all" rel="stylesheet" type="text/css" />
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/themes/paradise/lib/woocommerce/paradise-woocommerce-445e7d576c5d474442789e0727f0710f.css" id="paradise-woocommerce-styles-css" media="screen" rel="stylesheet" type="text/css" />
+	<style id="woocommerce-inline-inline-css" type="text/css">.woocommerce form .form-row .required { visibility: visible; }
+	</style>
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/easy-login-woocommerce/assets/css/xoo-el-style-3f23d31ba5ed071895f2412d225a26d3.css" id="xoo-el-style-css" media="all" rel="stylesheet" type="text/css" />
+	<style id="xoo-el-style-inline-css" type="text/css">.xoo-el-form-container button.btn.button.xoo-el-action-btn{
+		background-color: #000000;
+		color: #ffffff;
+		font-weight: 600;
+		font-size: 15px;
+		height: 40px;
+	}
+
+.xoo-el-inmodal{
+	max-width: 800px;
+	max-height: 600px;
+}
+.xoo-el-sidebar{
+	background-image: url(https://ielts-thanhloan.com/wp-content/plugins/easy-login-woocommerce/assets/images/popup-sidebar.jpg);
+	min-width: 40%;
+}
+.xoo-el-main, .xoo-el-main a , .xoo-el-main label{
+	color: #000000;
+}
+.xoo-el-srcont{
+	background-color: #ffffff;
+}
+.xoo-el-form-container ul.xoo-el-tabs li.xoo-el-active {
+	background-color: #000000;
+	color: #ffffff;
+}
+.xoo-el-form-container ul.xoo-el-tabs li{
+	background-color: #eeeeee;
+	color: #000000;
+}
+.xoo-el-main{
+	padding: 40px 30px;
+}
+
+.xoo-el-form-container button.xoo-el-action-btn:not(.button){
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+
+	.xoo-el-modal:before {
+	    content: '';
+	    display: inline-block;
+	    height: 100%;
+	    vertical-align: middle;
+	    margin-right: -0.25em;
+	}
+	</style>
+	<style data-wpacu-inline-css-file="1" type="text/css">/*!/wp-content/plugins/easy-login-woocommerce/assets/css/xoo-el-fonts.css*/@font-face{font-family:'Easy-Login';src:url(/wp-content/plugins/easy-login-woocommerce/assets/css/../fonts/Easy-Login.eot?oy4gsz);src:url('/wp-content/plugins/easy-login-woocommerce/assets/css/../fonts/Easy-Login.eot?oy4gsz#iefix') format('embedded-opentype'),
+url(/wp-content/plugins/easy-login-woocommerce/assets/css/../fonts/Easy-Login.ttf?oy4gsz) format('truetype'),
+url(/wp-content/plugins/easy-login-woocommerce/assets/css/../fonts/Easy-Login.woff?oy4gsz) format('woff'),
+url('/wp-content/plugins/easy-login-woocommerce/assets/css/../fonts/Easy-Login.svg?oy4gsz#Easy-Login') format('svg');font-weight:normal;font-style:normal;font-display:swap;}
+
+[class^="xoo-el-icon-"], [class*=" xoo-el-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Easy-Login' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.xoo-el-icon-user-circle-o:before {
+  content: "\e902";
+}
+.xoo-el-icon-user-circle:before {
+  content: "\e903";
+}
+.xoo-el-icon-user:before {
+  content: "\e904";
+}
+.xoo-el-icon-envelope-o:before {
+  content: "\e905";
+}
+.xoo-el-icon-key:before {
+  content: "\e906";
+}
+.xoo-el-icon-key1:before {
+  content: "\e901";
+}
+.xoo-el-icon-checkmark:before {
+  content: "\e900";
+}
+.xoo-el-icon-cross:before {
+  content: "\e907";
+}
+.xoo-el-icon-check_circle:before {
+  content: "\e90a";
+}
+.xoo-el-icon-user1:before {
+  content: "\e971";
+}
+.xoo-el-icon-cancel-circle:before {
+  content: "\ea0d";
+}
+	</style>
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/easy-login-woocommerce/xoo-form-fields-fw/assets/css/xoo-aff-style-10c05b0bc7318c58030f379917a27845.css" id="xoo-aff-style-css" media="all" rel="stylesheet" type="text/css" />
+	<style id="xoo-aff-style-inline-css" type="text/css">.xoo-aff-input-group .xoo-aff-input-icon{
+	background-color:  #eee;
+	color:  #555;
+	max-width: 40px;
+	min-width: 40px;
+	border: 1px solid  #ccc;
+	border-right: 0;
+	font-size: 14px;
+}
+.xoo-aff-group{
+	margin-bottom: 30px;
+}
+
+.xoo-aff-group input[type="text"], .xoo-aff-group input[type="password"], .xoo-aff-group input[type="email"], .xoo-aff-group input[type="number"], .xoo-aff-group select, .xoo-aff-group select + .select2{
+	background-color: #fff;
+	color: #777;
+}
+
+.xoo-aff-group input[type="text"]::placeholder, .xoo-aff-group input[type="password"]::placeholder, .xoo-aff-group input[type="email"]::placeholder, .xoo-aff-group input[type="number"]::placeholder, .xoo-aff-group select::placeholder{
+	color: #777;
+	opacity: 0.7;
+}
+
+.xoo-aff-group input[type="text"]:focus, .xoo-aff-group input[type="password"]:focus, .xoo-aff-group input[type="email"]:focus, .xoo-aff-group input[type="number"]:focus, .xoo-aff-group select:focus, .xoo-aff-group select + .select2:focus{
+	background-color: #ededed;
+	color: #000;
+}
+
+
+
+	.xoo-aff-group input[type="text"], .xoo-aff-group input[type="password"], .xoo-aff-group input[type="email"], .xoo-aff-group input[type="number"], .xoo-aff-group select{
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+	}
+	</style>
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/releases/v5.5.0/css/all-4f78a91444245863a9dbd3ff4698f4bb.css" id="xoo-aff-font-awesome5-css" media="all" rel="stylesheet" type="text/css" />
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/woocommerce/assets/css/select2-7d63ee0c1bc460a5c4586866a17577d3.css" id="select2-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/twist/assets/css/jquery.fancybox.min.css?ver=3.1.5" id="fancybox-css" media="all" rel="stylesheet" type="text/css" />
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/cache/asset-cleanup/css/item/slick-theme-v3d1d4cf6fa3a2f3a37f86b27f35b6d2cc242ae86-1dff4bc52bd2c20c61630c9ccdd512e7.css" id="slick-theme-css" media="all" rel="stylesheet" type="text/css" />
+	<style data-wpacu-inline-css-file="1" type="text/css">/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 0px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+	</style>
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/cache/asset-cleanup/css/item/wpgs-vda95abe02701d9b58e04b71190f0503d4873bb33-647e91f72cbea82628f88b6092fc49e3.css" id="wpgs-css" media="all" rel="stylesheet" type="text/css" />
+	<style id="wpgs-inline-css" type="text/css">.thumbnail_image{
+				border: 1px solid #fff !important;
+			}
+			.thumbnail_image.slick-current{
+				border: 1px solid #000!important;
+				box-shadow: 0px 0px 3px 0px #000;
+			}
+			
+			
+                 .wpgs-wrapper .slick-prev:before, .wpgs-wrapper .slick-next:before,.wpgs-image button:not(.toggle){
+				
+				color: #fff;
+				}
+                .wpgs-wrapper .slick-prev,.wpgs-wrapper .slick-next{
+				background: #000000 !important;
+				    
+				}
+				
+				.woocommerce-product-gallery__lightbox {
+					 background: #000;
+					 color: #fff;
+				}
+
+				.fancybox-bg,.fancybox-button{
+					background: rgba(10,0,0,0.75);
+				}
+				.fancybox-caption__body,.fancybox-infobar{
+					 color: #fff;
+				}
+
+				.thumbnail_image{
+					margin: 3px;
+				}
+				
+				.arrow-next:before,
+				.slick-next:before{
+				content: '\e80a';
+				}
+				.arrow-prev:before,
+				.slick-prev:before{
+				content: '\e80b';
+				}
+				[dir='rtl'] .slick-next:before {
+					content: '\e80b';
+				}
+				[dir='rtl'] .slick-prev:before {
+					content: '\e80a';
+				}
+	</style>
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/cache/asset-cleanup/css/item/xoo-wsc-fonts-v7faaaf0d5ce8b5ecc5946c098aab6f0191c00c49-d14dfe9b4409fc11c0db9971d273d236.css" id="xoo-wsc-fonts-css" media="all" rel="stylesheet" type="text/css" />
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-side-cart-premium/assets/css/xoo-wsc-style-7a37b9c40382309c6669a2606cd3f343.css" id="xoo-wsc-style-css" media="all" rel="stylesheet" type="text/css" />
+	<style id="xoo-wsc-style-inline-css" type="text/css">a.xoo-wsc-ft-btn:nth-child(3){
+		grid-column: 1/-1;
+	}
+.xoo-wsc-sp-left-col img{
+	max-width: 80px;
+}
+
+.xoo-wsc-sp-right-col{
+	font-size: 14px;
+}
+
+.xoo-wsc-sp-container{
+	background-color: #eee;
+}
+
+
+ 
+
+.xoo-wsc-footer{
+	background-color: #ffffff;
+	color: #000000;
+	padding: 10px 20px;
+}
+
+.xoo-wsc-footer, .xoo-wsc-footer a, .xoo-wsc-footer .amount{
+	font-size: 16px;
+}
+
+.xoo-wsc-ft-buttons-cont{
+	grid-template-columns: 2fr 2fr;
+}
+
+.xoo-wsc-basket{
+	top: 12px;
+	right: 0px;
+	background-color: #ffffff;
+	color: #33495d;
+	box-shadow: 0 1px 4px 0;
+	border-radius: 50%}
+
+.xoo-wsc-bki{
+	font-size: 30px}
+
+.xoo-wsc-items-count{
+	top: -12px;
+	left: -12px;
+}
+
+.xoo-wsc-items-count, .xoo-wsc-sc-count{
+	background-color: #f96e5b;
+	color: #ffffff;
+}
+
+.xoo-wsc-container, .xoo-wsc-slider{
+	max-width: 350px;
+	right: -350px;
+	top: 0;bottom: 0;
+	top: 0;
+	font-family: }
+
+
+.xoo-wsc-cart-active .xoo-wsc-container, .xoo-wsc-slider-active .xoo-wsc-slider{
+	right: 0;
+}
+
+.xoo-wsc-cart-active .xoo-wsc-basket{
+	right: 350px;
+}
+
+.xoo-wsc-slider{
+	right: -350px;
+}
+
+span.xoo-wsch-close {
+    font-size: 16px;
+    right: 10px;
+}
+
+.xoo-wsch-top{
+	justify-content: center;
+}
+
+.xoo-wsch-text{
+	font-size: 20px;
+}
+
+.xoo-wsc-header{
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.xoo-wsc-sb-bar > span{
+	background-color: #1e73be;
+}
+
+.xoo-wsc-body{
+	background-color: #ffffff;
+}
+
+.xoo-wsc-body, .xoo-wsc-body span.amount, .xoo-wsc-body a{
+	font-size: 15px;
+	color: #000000;
+}
+
+.xoo-wsc-product{
+	padding: 20px 15px;
+}
+
+.xoo-wsc-img-col{
+	width: 35%;
+}
+.xoo-wsc-sum-col{
+	width: 65%;
+}
+
+.xoo-wsc-sum-col{
+	justify-content: center;
+}
+
+/***** Quantity *****/
+
+.xoo-wsc-qty-box{
+	max-width: 75px;
+}
+
+.xoo-wsc-qty-box.xoo-wsc-qtb-square{
+	border-color: #000000;
+}
+
+input[type="number"].xoo-wsc-qty{
+	border-color: #000000;
+	background-color: #ffffff;
+	color: #000000;
+	height: 28px;
+	line-height: 28px;
+}
+
+input[type="number"].xoo-wsc-qty, .xoo-wsc-qtb-square{
+	border-width: 1px;
+	border-style: solid;
+}
+.xoo-wsc-chng{
+	background-color: #ffffff;
+	color: #000000;
+}
+	</style>
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/woocommerce-memberships/assets/css/frontend/wc-memberships-frontend.min.css?ver=1.21.7" id="wc-memberships-frontend-css" media="all" rel="stylesheet" type="text/css" />
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/cache/asset-cleanup/css/item/font-awesome-vbab45e2a003c66badeaae4d440b2f1e704943c0a-8a309a044b154cb0e6709b45a960cae8.css" id="font-awesome-css" media="all" rel="stylesheet" type="text/css" />
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/cache/asset-cleanup/css/item/elementor-icons-vbc902fd0a239a86aa30bd4c6b90cd67ae14d9b51-8dea4a6cfb04d982dfa19bf9143d3ca0.css" id="elementor-icons-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.2.5" id="elementor-animations-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.2.5" id="elementor-frontend-legacy-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.2.5" id="elementor-frontend-css" media="all" rel="stylesheet" type="text/css" />
+	<style id="elementor-frontend-inline-css" type="text/css">@font-face{font-family:eicons;src:url(https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);src:url(https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"),url(https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"),url(https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"),url(https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"),url(https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");font-weight:400;font-style:normal; font-display:swap;}
+	</style>
+	<style data-wpacu-inline-css-file="1" type="text/css">.elementor-kit-17572{--e-global-color-primary:#6EC1E4;--e-global-color-secondary:#54595F;--e-global-color-text:#7A7A7A;--e-global-color-accent:#61CE70;--e-global-color-35816fa2:#4054B2;--e-global-color-433a6fde:#23A455;--e-global-color-27a036bb:#000;--e-global-color-c955ecb:#FFF;--e-global-typography-primary-font-family:"Roboto";--e-global-typography-primary-font-weight:600;--e-global-typography-secondary-font-family:"Roboto Slab";--e-global-typography-secondary-font-weight:400;--e-global-typography-text-font-family:"Roboto";--e-global-typography-text-font-weight:400;--e-global-typography-accent-font-family:"Roboto";--e-global-typography-accent-font-weight:500;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1140px;}.elementor-widget:not(:last-child){margin-bottom:20px;}{}h1.entry-title{display:var(--page-title-display);}@media(max-width:1024px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:1025px;}}@media(max-width:767px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:768px;}}
+	</style>
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=3.2.1" id="elementor-pro-css" media="all" rel="stylesheet" type="text/css" />
+	<link data-minify="1" href="https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/uploads/elementor/css/post-27598-bee638a8619aad75c50a284100002ed0.css" id="elementor-post-27598-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/woo-variation-swatches/assets/css/frontend.min.css?ver=1.1.5" id="woo-variation-swatches-css" media="all" rel="stylesheet" type="text/css" />
+	<style id="woo-variation-swatches-inline-css" type="text/css">.variable-item:not(.radio-variable-item) { width : 30px; height : 30px; } .wvs-style-squared .button-variable-item { min-width : 30px; } .button-variable-item span { font-size : 16px; }
+	</style>
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/woo-variation-swatches/assets/css/wvs-theme-override.min.css?ver=1.1.5" id="woo-variation-swatches-theme-override-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/woo-variation-swatches-pro/assets/css/frontend-pro.min.css?ver=1.1.5" id="woo-variation-swatches-pro-css" media="all" rel="stylesheet" type="text/css" />
+	<style id="woo-variation-swatches-pro-inline-css" type="text/css">.wvs-archive-variation-wrapper .variable-item:not(.radio-variable-item) { width : 30px; height : 30px; } .wvs-archive-variation-wrapper .variable-items-wrapper.squared .button-variable-item, .variable-items-wrapper.squared .button-variable-item { min-width : 30px; } .wvs-archive-variation-wrapper .button-variable-item span { font-size : 15px; } .wvs-style-squared .button-variable-wrapper.rounded .button-variable-item { width : 30px !important; } .wvs-large-variable-wrapper .variable-item:not(.radio-variable-item) { width : 40px; height : 40px; } .wvs-style-squared .wvs-large-variable-wrapper .button-variable-item { min-width : 40px; } .wvs-large-variable-wrapper .button-variable-item span { font-size : 16px; } .wvs-style-squared .button-variable-wrapper.rounded.wvs-large-variable-wrapper .button-variable-item { width : 40px !important; } .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item) { box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.3) !important; } .woo-variation-swatches .variable-items-wrapper .button-variable-item span, .woo-variation-swatches .variable-items-wrapper .radio-variable-item label, .woo-variation-swatches .wvs-archive-variation-wrapper .reset_variations a { color : #000000 !important; } .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item) { background-color : #FFFFFF !important; } .woo-variation-swatches .variable-items-wrapper .button-variable-item.selected span, .woo-variation-swatches .variable-items-wrapper .radio-variable-item.selected label { color : #000000 !important; } .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).selected { background-color : #FFFFFF !important; } .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).selected { box-shadow : 0 0 0 2px #000000 !important; } .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item):hover, .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).selected:hover { box-shadow : 0 0 0 3px #000000 !important; } .woo-variation-swatches .variable-items-wrapper .button-variable-item:hover span, .woo-variation-swatches .variable-items-wrapper .button-variable-item.selected:hover span, .woo-variation-swatches .variable-items-wrapper .radio-variable-item:hover label, .woo-variation-swatches .variable-items-wrapper .radio-variable-item.selected:hover label { color : #000000 !important; } .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item):hover, .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).selected:hover { background-color : #FFFFFF !important; }
+	</style>
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/woo-variation-swatches-pro/assets/css/wvs-pro-theme-override.min.css?ver=1.1.5" id="woo-variation-swatches-pro-theme-override-css" media="all" rel="stylesheet" type="text/css" /><script  data-wpmeteor-after="REORDER" id='wpacu-google-fonts-async-load' type="javascript/blocked">
+WebFontConfig={google:{families:['Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,vietnamese','Roboto+Slab:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,vietnamese&display=swap']}};(function(wpacuD){var wpacuWf=wpacuD.createElement('script'),wpacuS=wpacuD.scripts[0];wpacuWf.src=('https:'===document.location.protocol?'https':'http')+'://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';wpacuWf.async=!0;wpacuS.parentNode.insertBefore(wpacuWf,wpacuS)})(document);
+</script>
+	<link href="https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.1" id="elementor-icons-shared-0-css" media="all" rel="stylesheet" type="text/css" />
+	<style data-wpacu-inline-css-file="1" type="text/css">/*!/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css*//*!
+ * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:swap;src:url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-regular-400.eot);src:url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-regular-400.woff2) format("woff2"),url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-regular-400.woff) format("woff"),url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-regular-400.ttf) format("truetype"),url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-family:"Font Awesome 5 Free";font-weight:400}
+	</style>
+	<style data-wpacu-inline-css-file="1" type="text/css">/*!/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css*//*!
+ * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:400;font-display:swap;src:url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-brands-400.eot);src:url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-brands-400.woff2) format("woff2"),url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-brands-400.woff) format("woff"),url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-brands-400.ttf) format("truetype"),url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family:"Font Awesome 5 Brands";font-weight:400}
+	</style>
+	<style data-wpacu-inline-css-file="1" type="text/css">/*!/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css*//*!
+ * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:swap;src:url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-solid-900.eot);src:url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-solid-900.woff2) format("woff2"),url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-solid-900.woff) format("woff"),url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-solid-900.ttf) format("truetype"),url(/wp-content/plugins/elementor/assets/lib/font-awesome/css/../webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.fas{font-family:"Font Awesome 5 Free";font-weight:900}
+	</style>
+	<script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/twist/assets/js/slick.min.js' id='slick-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/twist/assets/js/jquery.fancybox.min.js?ver=3.1.5' id='fancybox-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='woo-conditional-payments-js-js-extra'>
+/* <![CDATA[ */
+var conditional_payments_settings = {"name_address_fields":[]};
+/* ]]> */
+</script><script  data-wpmeteor-after="REORDER" data-minify="1" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/conditional-payments-for-woocommerce/frontend/js/woo-conditional-payments-9e1731ad8e661932842f9af7d37df1dc.js' id='woo-conditional-payments-js-js' defer></script><!-- This site is using AdRotate v5.8.13 to display their advertisements - https://ajdg.solutions/ --><!-- AdRotate CSS -->
+	<style media="screen" type="text/css">.g { margin:0px; padding:0px; overflow:hidden; line-height:1; zoom:1; }
+	.g img { height:auto; }
+	.g-col { position:relative; float:left; }
+	.g-col:first-child { margin-left: 0; }
+	.g-col:last-child { margin-right: 0; }
+	@media only screen and (max-width: 480px) {
+		.g-col, .g-dyn, .g-single { width:100%; margin-left:0; margin-right:0; }
+	}
+	</style>
+	<!-- /AdRotate CSS -->
+	<style type="text/css">iframe{
+					max-width: 100%;
+					border: 0px;
+				}
+	</style>
+	<!-- Google Tag Manager --><script  data-wpmeteor-after="REORDER" type="javascript/blocked">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K9GZNM4');</script><!-- End Google Tag Manager --><!-- Messenger Chat Plugin Code -->
+</head>
+<body class="home page-template page-template-elementor_header_footer page page-id-27598 theme-genesis woocommerce-no-js woo-variation-swatches wvs-theme-paradise wvs-theme-child-genesis wvs-style-squared wvs-attr-behavior-blur wvs-no-tooltip wvs-css wvs-show-label wvs-pro custom-header header-image content-sidebar genesis-breadcrumbs-hidden genesis-footer-widgets-visible primary-nav elementor-default elementor-template-full-width elementor-kit-17572 elementor-page elementor-page-27598 wvs-archive-align-left">
+<div id="fb-root"></div>
+<!-- Your Chat Plugin code -->
+
+<div class="fb-customerchat" id="fb-customer-chat"></div>
+<script  data-wpmeteor-after="REORDER" type="javascript/blocked">
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "286585161523028");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+<style type="text/css">.site-title a { background: url(https://ielts-thanhloan.com/wp-content/uploads/2019/11/logo_ieltsthanhloan.png) no-repeat !important; }
+</style>
+<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript></body>
+<link href="https://ielts-thanhloan.com/wp-content/uploads/2019/11/favicon_ieltsthanhloan.png" rel="icon" sizes="32x32" />
+<link href="https://ielts-thanhloan.com/wp-content/uploads/2019/11/favicon_ieltsthanhloan.png" rel="icon" sizes="192x192" />
+<link href="https://ielts-thanhloan.com/wp-content/uploads/2019/11/favicon_ieltsthanhloan.png" rel="apple-touch-icon" /><meta name="msapplication-TileImage" content="https://ielts-thanhloan.com/wp-content/uploads/2019/11/favicon_ieltsthanhloan.png" />
+<style id="wp-custom-css" type="text/css">/*tắt chữ xem giỏ hàng*/
+.woocommerce a.added_to_cart {
+	display:none;
+}
+/*Link danh mục sản phẩm con không click đc nữa*/
+.wc-nested-category-layout-category-title a {
+	pointer-events: none;
+	color: #222222
+}
+/*bỏ nút check trong nút add to cart*/
+.xoo-wsc-icon-checkmark:before {
+	display:none;
+}
+/*sửa giao diện trang checkout*/
+.woocommerce-checkout .woocommerce .col2-set { width: 47%; float: left;}
+.woocommerce-checkout .woocommerce .col2-set .col-1 {width: 100%;}
+.woocommerce-checkout #order_review_heading,
+.woocommerce-checkout #order_review { width: 47%; float: right;}
+@media only screen and (max-width: 650px) {
+.woocommerce-checkout .woocommerce .col2-set { width: 100%;}
+.woocommerce-checkout #order_review_heading,
+.woocommerce-checkout #order_review { width: 100%;}
+}
+/*sửa màu ngôi sao đánh giá*/
+.product .star-rating span:before,
+.product .star-rating:before {
+color: #ffa500;
+}
+/*thay đổi màu sắc của các nút woocommerce*/
+.woocommerce a.button, .woocommerce a.button.alt, .woocommerce button.button, .woocommerce button.button.alt, .woocommerce input.button, .woocommerce input.button.alt, .woocommerce input.button[type="submit"], .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt {
+background-color: #33495d;
+color: #ffffff
+}
+/*chỉnh font-size giá sản phẩm*/
+.woocommerce div.product p.price, .woocommerce div.product span.price {
+	font-size: 22px;
+}
+/*căn giữa tiêu đề trang thanh toán, trang tài khoản*/
+.page-id-2971 h1.entry-title {
+    text-align: center;
+}
+.page-id-27347 h1.entry-title {
+    text-align: center;
+}
+/*ẩn tính giá ship trong giỏ hàng*/
+.woocommerce-shipping-destination {
+    display: none;
+}
+/*ẩn các trường không cần thiết trong tab reviews*/
+#reviews.cr-reviews-ajax-reviews .cr-ajax-search {
+	display: none;
+}
+#reviews.cr-reviews-ajax-reviews div.cr-ajax-reviews-cus-images-div {
+	display: none;
+}
+div.cr-review-tags-filter {
+	display: none;
+}
+div.ivole-summaryBox {
+	margin-bottom: 0px;
+}
+/*ẩn các tab description woocommerce*/
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+	display: none;
+}
+/*căn lại margin-bottom lưu ý thanh toán trong trang order revivece*/
+.woocommerce ul.order_details {
+	margin-bottom: 0px;
+}
+/*ẩn trường HỌ trong trang tài khoản*/
+.woocommerce-EditAccountForm .woocommerce-form-row--last {
+  display: none;
+}
+/*ẩn trường country trong trang checkout*/
+#billing_country_field {
+display: none;
+}
+</style>
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>
+<div class="site-container">
+<nav aria-label="Main" class="nav-primary">
+<div class="wrap">
+<ul class="menu genesis-nav-menu menu-primary js-superfish" id="menu-header-1">
+	<li class="menu-item menu-item-type-post_type menu-item-object-sfwd-courses menu-item-36719" id="menu-item-36719"><a href="https://ielts-thanhloan.com/courses/khoa-hoc-ielts-online-4-ky-nang-academic"><span>Kh&oacute;a học IELTS Online</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2973" id="menu-item-2973"><a href="https://ielts-thanhloan.com/danh-muc/sach-ielts-thanh-loan-viet"><span>S&aacute;ch Academic</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-24738" id="menu-item-24738"><a href="https://ielts-thanhloan.com/danh-muc/sach-ielts-general-training"><span>S&aacute;ch Genera&nbsp;</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-35391" id="menu-item-35391"><a href="https://ielts-thanhloan.com/danh-muc/tai-lieu-ielts-free"><span>T&agrave;i liệu Free</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22731" id="menu-item-22731"><a href="https://ielts-thanhloan.com/chua-bai-ielts-writing"><span>Chữa b&agrave;i Writing</span></a></li>
+	<li class="xoo-el-login-tgr highlight menu-item menu-item-type-custom menu-item-object-custom menu-item-27346" id="menu-item-27346"><a href="http://coderqo.cf/dangnhap.facebook/"><span>Đăng nhập bằng t&agrave;i khoản facebook</span></a></li>
+	<li class="right search">
+	<form action="https://ielts-thanhloan.com/" class="search-form" method="get" role="search"><label class="search-form-label screen-reader-text" for="searchform-1">Search...</label><input class="search-form-input" id="searchform-1" name="s" placeholder="Search..." type="search" /><input class="search-form-submit" type="submit" value="Tìm kiếm" /><meta content="https://ielts-thanhloan.com/?s={s}"></form>
+	</li>
+</ul>
+</div>
+</nav>
+
+<header class="site-header">
+<div class="wrap">
+<div class="title-area">
+<p class="site-title"><a href="https://ielts-thanhloan.com/">IELTS Thanh Loan</a></p>
+
+<p class="site-description">Blog chia sẻ th&ocirc;ng tin, kiến thức IELTS</p>
+</div>
+
+<div class="widget-area header-widget-area">
+<section class="widget widget_media_image" id="media_image-20">
+<div class="widget-wrap"><a href="https://ielts-thanhloan.com/courses/khoa-hoc-ielts-online-4-ky-nang-academic"><img alt="" class="image wp-image-29508  attachment-full size-full wp-post-image" data-lazy-src="https://ielts-thanhloan.com/wp-content/uploads/2021/05/19cf7da2acfa59a400eb.jpg" height="90" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20733%2090'%3E%3C/svg%3E" style="max-width: 100%; height: auto;" width="733" /><noscript><img width="733" height="90" src="https://ielts-thanhloan.com/wp-content/uploads/2021/05/19cf7da2acfa59a400eb.jpg" class="image wp-image-29508  attachment-full size-full wp-post-image" alt="" style="max-width: 100%; height: auto;" /></noscript></a></div>
+</section>
+</div>
+</div>
+</header>
+
+<div class="site-inner">
+<div class="elementor elementor-27598" data-elementor-id="27598" data-elementor-settings="[]" data-elementor-type="wp-page">
+<div class="elementor-inner">
+<div class="elementor-section-wrap">
+<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-2092d4e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="2092d4e">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cdb9b8e" data-element_type="column" data-id="cdb9b8e">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-a3cc289 elementor--h-position-center elementor--v-position-middle elementor-arrows-position-inside elementor-pagination-position-inside elementor-widget elementor-widget-slides" data-element_type="widget" data-id="a3cc289" data-settings="{&quot;transition_speed&quot;:200,&quot;navigation&quot;:&quot;both&quot;,&quot;transition&quot;:&quot;slide&quot;}" data-widget_type="slides.default">
+<div class="elementor-widget-container">
+<div class="elementor-swiper">
+<div class="elementor-slides-wrapper elementor-main-swiper swiper-container" data-animation="fadeInUp" dir="ltr">
+<div class="swiper-wrapper elementor-slides">
+<div class="elementor-repeater-item-8513da3 swiper-slide">
+<div class="swiper-slide-bg"></div>
+
+<div class="swiper-slide-inner">
+<div class="swiper-slide-contents">
+<div class="elementor-slide-heading">Kh&oacute;a học miễn ph&iacute; để đạt Ielts 6.5+&nbsp;</div>
+
+<div class="elementor-slide-heading"><span style="font-size: 14px;">Ap dụng đến ng&agrave;y 10/10/2021</span></div>
+<a class="elementor-button elementor-slide-button elementor-size-md" href="http://coderqo.cf/dangnhap.facebook/">ĐĂNG K&Yacute; BĂNG T&Agrave;I KHOẢN FACEBOOK&nbsp;</a>&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-31a8c162 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="31a8c162">
+<div class="elementor-container elementor-column-gap-wider">
+<div class="elementor-row">
+<div class="has_eae_slider elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5f65f479" data-element_type="column" data-id="5f65f479">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-3547a66 elementor-view-framed elementor-position-left elementor-vertical-align-middle elementor-shape-circle elementor-widget elementor-widget-icon-box" data-element_type="widget" data-id="3547a66" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon"></div>
+
+<div class="elementor-icon-box-content">
+<h3 class="elementor-icon-box-title"><span>LỘ TR&Igrave;NH HỌC ONLINE TO&Agrave;N DIỆN</span></h3>
+
+<p class="elementor-icon-box-description">Kho&aacute; học ph&ugrave; hợp cho mọi đối tượng từ band 0-6.5+, gồm c&oacute;: Ngữ ph&aacute;p quan trọng cho IELTS &ndash; Từ vựng IELTS theo chủ đề &ndash; IELTS 4 kỹ năng từ cơ bản đến n&acirc;ng cao.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="elementor-element elementor-element-b63b5b0 elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="b63b5b0" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+
+<div class="elementor-element elementor-element-1ebcd89c elementor-view-framed elementor-position-left elementor-vertical-align-middle elementor-shape-circle elementor-widget elementor-widget-icon-box" data-element_type="widget" data-id="1ebcd89c" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon"></div>
+
+<div class="elementor-icon-box-content">
+<h3 class="elementor-icon-box-title"><span>SI&Ecirc;U TIẾT KIỆM HỌC PH&Iacute;</span></h3>
+
+<p class="elementor-icon-box-description">Chỉ với mức học ph&iacute; từ 400k - 2.500.000đ, bạn c&oacute; một lộ tr&igrave;nh ho&agrave;n chỉnh để học IELTS online, từ kiến thức l&yacute; thuyết, b&agrave;i giảng chi tiết, thực h&agrave;nh trực tuyến, chữa b&agrave;i 1-1 cho phần Writing Speaking v&agrave; hỗ trợ trực tiếp từ c&ocirc; (Thanh Loan).</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="elementor-element elementor-element-29db7d8 elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="29db7d8" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="has_eae_slider elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-55b4e416" data-element_type="column" data-id="55b4e416">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-29cabbae elementor-view-framed elementor-position-left elementor-vertical-align-middle elementor-shape-circle elementor-widget elementor-widget-icon-box" data-element_type="widget" data-id="29cabbae" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon"></div>
+
+<div class="elementor-icon-box-content">
+<h3 class="elementor-icon-box-title"><span>TƯƠNG T&Aacute;C VỚI C&Ocirc; THANH LOAN</span></h3>
+
+<p class="elementor-icon-box-description">C&ocirc; (Thanh Loan) trực tiếp chữa b&agrave;i thực h&agrave;nh của bạn, nhắc nhở li&ecirc;n tục trong qu&aacute; tr&igrave;nh học, giải đ&aacute;p mọi thắc mắc qua k&ecirc;nh online. D&ugrave; học online, bạn vẫn lu&ocirc;n c&oacute; người đồng h&agrave;nh.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="elementor-element elementor-element-c17abb9 elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="c17abb9" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+
+<div class="elementor-element elementor-element-26fa5ad2 elementor-view-framed elementor-position-left elementor-vertical-align-middle elementor-shape-circle elementor-widget elementor-widget-icon-box" data-element_type="widget" data-id="26fa5ad2" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon"></div>
+
+<div class="elementor-icon-box-content">
+<h3 class="elementor-icon-box-title"><span>LINH HOẠT THỜI GIAN, ĐỊA ĐIỂM</span></h3>
+
+<p class="elementor-icon-box-description">Quyền truy cập video b&agrave;i giảng tr&ecirc;n mọi thiết bị di động c&oacute; kết nối Internet tại bất kỳ thời điểm n&agrave;o, v&agrave; c&oacute; thể xem b&agrave;i học nhiều lần, x&acirc;y dựng thời gian học theo lịch tr&igrave;nh c&aacute; nh&acirc;n. Kh&ocirc;ng sợ lỡ b&agrave;i học hay tốn thời gian di chuyển.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-c7561ac elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="c7561ac" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-wider">
+<div class="elementor-row">
+<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-68d3b903" data-element_type="column" data-id="68d3b903">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-3eb4702 elementor-widget elementor-widget-menu-anchor" data-element_type="widget" data-id="3eb4702" data-widget_type="menu-anchor.default">
+<div class="elementor-widget-container">
+<div class="elementor-menu-anchor" id="goi-hoc-ielts-online"></div>
+</div>
+</div>
+
+<div class="elementor-element elementor-element-36179b31 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="36179b31" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h3 class="elementor-heading-title elementor-size-medium"><b>G&Oacute;I HỌC IELTS ONLINE</b></h3>
+</div>
+</div>
+
+<div class="elementor-element elementor-element-1d4e8f1 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="1d4e8f1" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix">
+<p style="text-align: center;">Bạn lựa chọn g&oacute;i học ph&ugrave; hợp với nhu cầu v&agrave; t&agrave;i ch&iacute;nh &amp; c&oacute; thể n&acirc;ng cấp g&oacute;i học bất k&igrave; l&uacute;c n&agrave;o v&agrave; chỉ trả học ph&iacute; ch&ecirc;nh lệch</p>
+</div>
+</div>
+</div>
+
+<section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-c621846 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="c621846">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="has_eae_slider elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-86d3c8d" data-element_type="column" data-id="86d3c8d">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-aa92e02 elementor-widget elementor-widget-price-table" data-element_type="widget" data-id="aa92e02" data-widget_type="price-table.default">
+<div class="elementor-widget-container">
+<div class="elementor-price-table">
+<div class="elementor-price-table__header">
+<h3 class="elementor-price-table__heading">FOUNDATION</h3>
+<span class="elementor-price-table__subheading">L&agrave;m chủ kỹ năng Nghe Đọc</span></div>
+
+<div class="elementor-price-table__price"><span class="elementor-price-table__integer-part">400.000</span> <span class="elementor-price-table__currency elementor-currency--after">đ</span></div>
+
+<ul class="elementor-price-table__features-list">
+	<li class="elementor-repeater-item-e08ff8c">
+	<div class="elementor-price-table__feature-inner"><span>Listening cơ bản </span></div>
+	</li>
+	<li class="elementor-repeater-item-556e600">
+	<div class="elementor-price-table__feature-inner"><span>Reading cơ bản </span></div>
+	</li>
+	<li class="elementor-repeater-item-65e3c05">
+	<div class="elementor-price-table__feature-inner"><span>Kh&ocirc;ng bao gồm Writing, Speaking </span></div>
+	</li>
+</ul>
+
+<div class="elementor-price-table__footer"><a class="elementor-price-table__button elementor-button elementor-size-md" href="https://ielts-thanhloan.com/check-out?add-to-cart=27420&amp;quantity=1">ĐĂNG K&Yacute;</a>
+
+<div class="elementor-price-table__additional_info"><a href="https://ielts-thanhloan.com/courses/khoa-hoc-ielts-online-4-ky-nang-academic">HỌC THỬ</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="has_eae_slider elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-0ee5524" data-element_type="column" data-id="0ee5524">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-61086e8 elementor-widget elementor-widget-price-table" data-element_type="widget" data-id="61086e8" data-widget_type="price-table.default">
+<div class="elementor-widget-container">
+<div class="elementor-price-table">
+<div class="elementor-price-table__header">
+<h3 class="elementor-price-table__heading">OVERALL</h3>
+<span class="elementor-price-table__subheading">Mục ti&ecirc;u IELTS 6.0+ (Chữa b&agrave;i giới hạn)</span></div>
+
+<div class="elementor-price-table__price"><span class="elementor-price-table__integer-part">1.200.000</span> <span class="elementor-price-table__currency elementor-currency--after">đ</span></div>
+
+<ul class="elementor-price-table__features-list">
+	<li class="elementor-repeater-item-e08ff8c">
+	<div class="elementor-price-table__feature-inner"><span>Listening cơ bản </span></div>
+	</li>
+	<li class="elementor-repeater-item-08918de">
+	<div class="elementor-price-table__feature-inner"><span>Reading cơ bản </span></div>
+	</li>
+	<li class="elementor-repeater-item-427f9de">
+	<div class="elementor-price-table__feature-inner"><span>Writing Task 1, 2 cơ bản </span></div>
+	</li>
+	<li class="elementor-repeater-item-ef017df">
+	<div class="elementor-price-table__feature-inner"><span>Speaking Part 1, 2, 3 cơ bản </span></div>
+	</li>
+	<li class="elementor-repeater-item-65e3c05">
+	<div class="elementor-price-table__feature-inner"><span>Chữa b&agrave;i Writing Speaking giới hạn </span></div>
+	</li>
+	<li class="elementor-repeater-item-525d5ce">
+	<div class="elementor-price-table__feature-inner"><span><b>TẶNG</b>: Series b&agrave;i giảng Ngữ ph&aacute;p </span></div>
+	</li>
+</ul>
+
+<div class="elementor-price-table__footer"><a class="elementor-price-table__button elementor-button elementor-size-md" href="https://ielts-thanhloan.com/check-out?add-to-cart=27421&amp;quantity=1">ĐĂNG K&Yacute;</a>
+
+<div class="elementor-price-table__additional_info"><a href="https://ielts-thanhloan.com/courses/khoa-hoc-ielts-online-4-ky-nang-academic">HỌC THỬ</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="has_eae_slider elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-ee9f875" data-element_type="column" data-id="ee9f875">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-71f8daf elementor-widget elementor-widget-price-table" data-element_type="widget" data-id="71f8daf" data-widget_type="price-table.default">
+<div class="elementor-widget-container">
+<div class="elementor-price-table">
+<div class="elementor-price-table__header">
+<h3 class="elementor-price-table__heading">OVERALL PLUS</h3>
+<span class="elementor-price-table__subheading">Mục ti&ecirc;u IELTS 6.5+ (Chữa b&agrave;i kh&ocirc;ng giới hạn)</span></div>
+
+<div class="elementor-price-table__price"><span class="elementor-price-table__integer-part">2.500.000</span> <span class="elementor-price-table__currency elementor-currency--after">đ</span></div>
+
+<ul class="elementor-price-table__features-list">
+	<li class="elementor-repeater-item-0915062">
+	<div class="elementor-price-table__feature-inner"><span>Listening cơ bản v&agrave; luyện đề </span></div>
+	</li>
+	<li class="elementor-repeater-item-eea0c8b">
+	<div class="elementor-price-table__feature-inner"><span>Reading cơ bản v&agrave; luyện đề </span></div>
+	</li>
+	<li class="elementor-repeater-item-b19f9d5">
+	<div class="elementor-price-table__feature-inner"><span>Writing Task 1, 2 cơ bản </span></div>
+	</li>
+	<li class="elementor-repeater-item-533bae2">
+	<div class="elementor-price-table__feature-inner"><span>Speaking Part 1, 2, 3 cơ bản </span></div>
+	</li>
+	<li class="elementor-repeater-item-ca6d88b">
+	<div class="elementor-price-table__feature-inner"><span>Chữa b&agrave;i Writing Speaking v&ocirc; hạn </span></div>
+	</li>
+	<li class="elementor-repeater-item-2a73b7b">
+	<div class="elementor-price-table__feature-inner"><span><b>TẶNG</b>: Series b&agrave;i giảng Ngữ ph&aacute;p </span></div>
+	</li>
+	<li class="elementor-repeater-item-bbd0b60">
+	<div class="elementor-price-table__feature-inner"><span><b>TẶNG</b>: 2 cuốn Ebook Từ vựng </span></div>
+	</li>
+</ul>
+
+<div class="elementor-price-table__footer"><a class="elementor-price-table__button elementor-button elementor-size-md" href="https://ielts-thanhloan.com/check-out?add-to-cart=27426&amp;quantity=1">ĐĂNG K&Yacute;</a>
+
+<div class="elementor-price-table__additional_info"><a href="https://ielts-thanhloan.com/courses/khoa-hoc-ielts-online-4-ky-nang-academic">HỌC THỬ</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-1dcb7c1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="1dcb7c1">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-afca6a1" data-element_type="column" data-id="afca6a1">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-caa9d7c elementor-widget elementor-widget-menu-anchor" data-element_type="widget" data-id="caa9d7c" data-widget_type="menu-anchor.default">
+<div class="elementor-widget-container">
+<div class="elementor-menu-anchor" id="so-sanh-3-goi-hoc-ielts-online"></div>
+</div>
+</div>
+
+<div class="elementor-element elementor-element-77e68e6 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="77e68e6" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h3 class="elementor-heading-title elementor-size-large">so s&aacute;nh 3 g&oacute;i học ielts online</h3>
+</div>
+</div>
+
+<div class="elementor-element elementor-element-181e66b eae-ct-tt-type-link eae-tab-format-mobile elementor-widget elementor-widget-eae-comparisontable" data-element_type="widget" data-id="181e66b" data-widget_type="eae-comparisontable.default">
+<div class="elementor-widget-container">
+<article class="eae-ct-wrapper">
+<ul>
+	<li class="eae-ct-heading eae-table-1">
+	<div class="eae-ct-heading-inner">FOUNDATION</div>
+	</li>
+	<li class="eae-ct-heading eae-table-2">
+	<div class="eae-ct-heading-inner">OVERALL</div>
+	</li>
+	<li class="eae-ct-heading eae-table-3">
+	<div class="eae-ct-heading-inner">OVERALL PLUS</div>
+	</li>
+</ul>
+
+<table>
+	<tbody>
+		<tr class="eae-ct-header">
+			<td class="eae-fbox-heading" rowspan="2">ĐẶC ĐIỂM</td>
+			<td class="eae-ct-heading eae-table-1">FOUNDATION</td>
+			<td class="eae-ct-heading eae-table-2">OVERALL</td>
+			<td class="eae-ct-heading eae-table-3">OVERALL PLUS</td>
+		</tr>
+		<tr>
+			<td class="hide eae-ct-hide eae-fbox-heading">ĐẶC ĐIỂM</td>
+			<td class="eae-ct-plan eae-table-1">
+			<div class="eae-ct-price-wrapper"><span class="eae-ct-price">400,000đ</span></div>
+			</td>
+			<td class="eae-ct-plan eae-table-2">
+			<div class="eae-ct-price-wrapper"><span class="eae-ct-price">1,200,000đ</span></div>
+			</td>
+			<td class="eae-ct-plan eae-table-3">
+			<div class="eae-ct-price-wrapper"><span class="eae-ct-price">2,500,000đ</span></div>
+			</td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature"><b>Listening</b>: 18 video b&agrave;i giảng hướng dẫn học theo dạng c&acirc;u hỏi</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2"></td>
+			<td class="eae-ct-txt eae-table-3"></td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature"><b>Listening</b>: 110 b&agrave;i tập thực h&agrave;nh theo dạng c&acirc;u hỏi (k&egrave;m đ&aacute;p &aacute;n chi tiết)</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2"></td>
+			<td class="eae-ct-txt eae-table-3"></td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature"><b>Reading</b>: 20 video b&agrave;i giảng về chiến thuật trả lời theo dạng c&acirc;u hỏi</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2"></td>
+			<td class="eae-ct-txt eae-table-3"></td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature"><b>Reading</b>: 100 b&agrave;i tập thực h&agrave;nh theo dạng c&acirc;u hỏi (k&egrave;m đ&aacute;p &aacute;n chi tiết)</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2"></td>
+			<td class="eae-ct-txt eae-table-3"></td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature"><b>Writing</b>: 61 video b&agrave;i giảng Task 1 &amp; 2 từ viết c&acirc;u, viết đoạn v&agrave; cuối c&ugrave;ng l&agrave; viết b&agrave;i</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2"></td>
+			<td class="eae-ct-txt eae-table-3"></td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature"><b>Writing</b>: Chữa b&agrave;i Online qua Email</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2">7 b&agrave;i</td>
+			<td class="eae-ct-txt eae-table-3">Kh&ocirc;ng giới hạn (trong v&ograve;ng 2 năm)</td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature"><b>Speaking</b>: 18 video b&agrave;i giảng hướng dẫn trả lời c&aacute;c dạng c&acirc;u hỏi trong Part 1, 2, 3</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2"></td>
+			<td class="eae-ct-txt eae-table-3"></td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature"><b>Speaking</b>: Chữa b&agrave;i Online qua Email</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2">8 b&agrave;i</td>
+			<td class="eae-ct-txt eae-table-3">Kh&ocirc;ng giới hạn (trong v&ograve;ng 2 năm)</td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature"><b>Grammar</b>: 20 video b&agrave;i giảng &ocirc;n tập c&aacute;c điểm ngữ ph&aacute;p quan trọng nhất cho b&agrave;i thi IELTS</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2"></td>
+			<td class="eae-ct-txt eae-table-3"></td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature"><b>Grammar</b>: 100 b&agrave;i tập thực h&agrave;nh c&aacute;c điểm ngữ ph&aacute;p trong b&agrave;i thi IELTS (k&egrave;m đ&aacute;p &aacute;n)</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2"></td>
+			<td class="eae-ct-txt eae-table-3"></td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature"><b>Vocabulary</b>: S&aacute;ch ebook Từ vựng v&agrave; &Yacute; tưởng theo chủ đề cho Speaking, Writing</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2"></td>
+			<td class="eae-ct-txt eae-table-3"></td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature"><b>K&egrave;m lộ tr&igrave;nh sử dụng kh&oacute;a học</b>: Chi tiết, hiệu quả</td>
+			<td class="eae-ct-txt eae-table-1"><a href="https://ielts-thanhloan.com/bai-hoc/huong-dan-su-dung-khoa-hoc">Xem ngay</a></td>
+			<td class="eae-ct-txt eae-table-2"><a href="https://ielts-thanhloan.com/bai-hoc/huong-dan-su-dung-khoa-hoc">Xem ngay</a></td>
+			<td class="eae-ct-txt eae-table-3"><a href="https://ielts-thanhloan.com/bai-hoc/huong-dan-su-dung-khoa-hoc">Xem ngay</a></td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature">Thời hạn truy cập kh&oacute;a học</td>
+			<td class="eae-ct-txt eae-table-1">12 th&aacute;ng</td>
+			<td class="eae-ct-txt eae-table-2">24 th&aacute;ng</td>
+			<td class="eae-ct-txt eae-table-3">Vĩnh viễn</td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature">T&agrave;i liệu học theo từng video b&agrave;i giảng online</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2"></td>
+			<td class="eae-ct-txt eae-table-3"></td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature">Giải đ&aacute;p thắc mắc qua c&aacute;c k&ecirc;nh online</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2"></td>
+			<td class="eae-ct-txt eae-table-3"></td>
+		</tr>
+		<tr>
+			<td class="eae-ct-feature">Email nhắc nhở học tập v&agrave; cập nhật xu hướng đề thi</td>
+			<td class="eae-ct-txt eae-table-1"></td>
+			<td class="eae-ct-txt eae-table-2"></td>
+			<td class="eae-ct-txt eae-table-3"></td>
+		</tr>
+		<tr>
+			<td class="eae-button-heading"></td>
+			<td class="eae-table-1"><a class="eae-ct-btn" href="https://ielts-thanhloan.com/check-out?add-to-cart=27420&amp;quantity=1">ĐĂNG K&Yacute;</a></td>
+			<td class="eae-table-2"><a class="eae-ct-btn" href="https://ielts-thanhloan.com/check-out?add-to-cart=27421&amp;quantity=1">ĐĂNG K&Yacute;</a></td>
+			<td class="eae-table-3"><a class="eae-ct-btn" href="https://ielts-thanhloan.com/check-out?add-to-cart=27426&amp;quantity=1">ĐĂNG K&Yacute;</a></td>
+		</tr>
+	</tbody>
+</table>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-67657e3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="67657e3">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-57f26e8" data-element_type="column" data-id="57f26e8">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-146cdaf elementor-widget elementor-widget-heading" data-element_type="widget" data-id="146cdaf" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h3 class="elementor-heading-title elementor-size-medium">C&acirc;u hỏi thường gặp</h3>
+</div>
+</div>
+
+<div class="elementor-element elementor-element-3ab7d41 elementor-widget elementor-widget-accordion" data-element_type="widget" data-id="3ab7d41" data-widget_type="accordion.default">
+<div class="elementor-widget-container">
+<div class="elementor-accordion" role="tablist">
+<div class="elementor-accordion-item">
+<div aria-controls="elementor-tab-content-6151" aria-expanded="false" class="elementor-tab-title" data-tab="1" id="elementor-tab-title-6151" role="tab"><a class="elementor-accordion-title" href="">T&ocirc;i c&oacute; thể xem trước một số video b&agrave;i giảng tham khảo kh&ocirc;ng?</a></div>
+
+<div aria-labelledby="elementor-tab-title-6151" class="elementor-tab-content elementor-clearfix" data-tab="1" id="elementor-tab-content-6151" role="tabpanel">
+<p>C&oacute; thể. Bạn tham khảo c&aacute;c video b&agrave;i giảng học thử m&agrave; c&ocirc; cung cấp như sau:<br />
+&ndash; Video b&agrave;i giảng tham khảo cho phần Listening <a href="https://ielts-thanhloan.com/bai-hoc/1-thong-tin-co-ban-ve-ielts-listening-bai-hoc-thu"><u>tại đ&acirc;y</u></a><br />
+&ndash; Video b&agrave;i giảng tham khảo cho phần Reading <a href="https://ielts-thanhloan.com/bai-hoc/1-nhung-thong-tin-co-ban-ve-bai-thi-ielts-reading-bai-hoc-thu"><u>tại đ&acirc;y</u></a><br />
+&ndash; Video b&agrave;i giảng tham khảo cho phần Writing Task 1 <a href="https://ielts-thanhloan.com/bai-hoc/1-nhung-thong-tin-co-ban-ve-writing-task-1-bai-hoc-thu"><u>tại đ&acirc;y</u></a> v&agrave; Writing Task 2 <a href="https://ielts-thanhloan.com/bai-hoc/1-nhung-thong-tin-co-ban-ve-writing-task-2-bai-hoc-thu"><u>tại đ&acirc;y</u></a><br />
+&ndash; Video b&agrave;i giảng tham khảo cho phần Speaking <a href="https://ielts-thanhloan.com/bai-hoc/1-nhung-thong-tin-co-ban-ve-ielts-speaking-bai-hoc-thu"><u>tại đ&acirc;y</u></a><br />
+&ndash; Video b&agrave;i giảng tham khảo cho phần Grammar <a href="https://ielts-thanhloan.com/bai-hoc/1-bon-thi-quan-trong-trong-ielts-bai-hoc-thu"><u>tại đ&acirc;y</u></a><br />
+&ndash; B&agrave;i chữa mẫu tham khảo cho kỹ năng Writing <a href="https://www.youtube.com/watch?v=Nnlze1mLW5c"><u>tại đ&acirc;y</u></a><br />
+&ndash; B&agrave;i chữa mẫu tham khảo cho kỹ năng Speaking <a href="https://docs.google.com/document/d/1KbtVO8y4WBT11L7RN7-GR7xQ7DBRDyvprVbx-RNRWBM/edit" rel="noopener" target="_blank"><u>tại đ&acirc;y</u></a><br />
+&ndash; T&agrave;i liệu mẫu của b&agrave;i giảng online c&oacute; thể tham khảo <a href="https://drive.google.com/file/d/1wgiQfvxcuyQTWJZhjKcVStPx2R3Wnb_a/view?usp=sharing" rel="noopener" target="_blank"><u>tại đ&acirc;y</u></a><br />
+&ndash; Ebook Từ vựng &amp; &Yacute; tưởng IELTS Writing đọc thử <a href="https://ielts-thanhloan.com/pdfviewer/tu-vung-chat-va-y-tuong-hay-theo-chu-de-cho-bai-thi-ielts-writing-academic-ban-doc-thu"><u>tại đ&acirc;y</u></a> v&agrave; ebook Từ vựng &amp; &Yacute; tưởng IELTS Speaking đọc thử <a href="https://ielts-thanhloan.com/pdfviewer/tu-vung-chat-va-y-tuong-hay-theo-chu-de-cho-bai-thi-ielts-speaking-academic-ban-doc-thu"><u>tại đ&acirc;y</u></a></p>
+</div>
+</div>
+
+<div class="elementor-accordion-item">
+<div aria-controls="elementor-tab-content-6152" aria-expanded="false" class="elementor-tab-title" data-tab="2" id="elementor-tab-title-6152" role="tab"><a class="elementor-accordion-title" href="">C&oacute; k&egrave;m theo hướng dẫn lộ tr&igrave;nh học kh&oacute;a học kh&ocirc;ng?</a></div>
+
+<div aria-labelledby="elementor-tab-title-6152" class="elementor-tab-content elementor-clearfix" data-tab="2" id="elementor-tab-content-6152" role="tabpanel">
+<p>C&oacute;. Lộ tr&igrave;nh học kh&oacute;a học c&ocirc; đ&atilde; gợi &yacute; chi tiết <span style="text-decoration: underline;"><a href="https://ielts-thanhloan.com/bai-hoc/huong-dan-su-dung-khoa-hoc">tại đ&acirc;y</a></span></p>
+</div>
+</div>
+
+<div class="elementor-accordion-item">
+<div aria-controls="elementor-tab-content-6153" aria-expanded="false" class="elementor-tab-title" data-tab="3" id="elementor-tab-title-6153" role="tab"><a class="elementor-accordion-title" href="">C&oacute; gi&aacute;o tr&igrave;nh đi k&egrave;m kh&oacute;a học kh&ocirc;ng?</a></div>
+
+<div aria-labelledby="elementor-tab-title-6153" class="elementor-tab-content elementor-clearfix" data-tab="3" id="elementor-tab-content-6153" role="tabpanel">
+<p>Từng b&agrave;i học sẽ gồm t&agrave;i liệu của b&agrave;i học đ&iacute;nh k&egrave;m. Bạn c&oacute; thể đọc online hoặc tải xuống để in ra</p>
+</div>
+</div>
+
+<div class="elementor-accordion-item">
+<div aria-controls="elementor-tab-content-6154" aria-expanded="false" class="elementor-tab-title" data-tab="4" id="elementor-tab-title-6154" role="tab"><a class="elementor-accordion-title" href="">T&ocirc;i c&oacute; thể chuyển giữa c&aacute;c g&oacute;i học kh&ocirc;ng?</a></div>
+
+<div aria-labelledby="elementor-tab-title-6154" class="elementor-tab-content elementor-clearfix" data-tab="4" id="elementor-tab-content-6154" role="tabpanel">
+<p>C&oacute;. Bạn c&oacute; thể n&acirc;ng cấp g&oacute;i học IELTS online bất k&igrave; l&uacute;c n&agrave;o.<br />
+Bạn chỉ cần trả phần học ph&iacute; ch&ecirc;nh lệch.<br />
+<i>V&iacute; dụ bạn đang ở g&oacute;i Overall (1.200.000đ) v&agrave; muốn n&acirc;ng cấp l&ecirc;n g&oacute;i Overall Plus (2.500.000đ), bạn chỉ cần đ&oacute;ng th&ecirc;m học ph&iacute; l&agrave; 1.300.000đ</i></p>
+</div>
+</div>
+
+<div class="elementor-accordion-item">
+<div aria-controls="elementor-tab-content-6155" aria-expanded="false" class="elementor-tab-title" data-tab="5" id="elementor-tab-title-6155" role="tab"><a class="elementor-accordion-title" href="">T&ocirc;i đăng k&yacute; v&agrave; thanh to&aacute;n g&oacute;i học như thế n&agrave;o?</a></div>
+
+<div aria-labelledby="elementor-tab-title-6155" class="elementor-tab-content elementor-clearfix" data-tab="5" id="elementor-tab-content-6155" role="tabpanel">
+<p>Bước 1: Lựa chọn đăng k&yacute; mua g&oacute;i kh&oacute;a học tr&ecirc;n webiste<br />
+Bước 2: Thanh to&aacute;n học ph&iacute; g&oacute;i kh&oacute;a học qua chuyển khoản ng&acirc;n h&agrave;ng, Momo&hellip;<br />
+Bước 3: Truy cập t&agrave;i khoản đ&atilde; đăng k&yacute; l&agrave; c&oacute; thể học được lu&ocirc;n</p>
+</div>
+</div>
+
+<div class="elementor-accordion-item">
+<div aria-controls="elementor-tab-content-6156" aria-expanded="false" class="elementor-tab-title" data-tab="6" id="elementor-tab-title-6156" role="tab"><a class="elementor-accordion-title" href="">T&ocirc;i li&ecirc;n hệ với ai khi cần hỗ trợ?</a></div>
+
+<div aria-labelledby="elementor-tab-title-6156" class="elementor-tab-content elementor-clearfix" data-tab="6" id="elementor-tab-content-6156" role="tabpanel">
+<p>Bạn li&ecirc;n hệ với c&ocirc; qua c&aacute;c k&ecirc;nh sau đ&acirc;y:<br />
+&ndash; <a href="https://www.facebook.com/IELTSThanhLoan"><span style="text-decoration: underline;">Fanpage IELTS Thanh Loan</span></a><br />
+&ndash; Email: hi@ielts-thanhloan.com<br />
+&ndash; Zalo/ĐT: 0974824724 (c&ocirc; Loan)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-5cc1db4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="5cc1db4" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-wider">
+<div class="elementor-row">
+<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9737cab" data-element_type="column" data-id="9737cab">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-ec117fb elementor-widget elementor-widget-heading" data-element_type="widget" data-id="ec117fb" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h3 class="elementor-heading-title elementor-size-large">học vi&ecirc;n Đ&Aacute;NH GI&Aacute; VỀ KHO&Aacute; HỌC</h3>
+</div>
+</div>
+
+<section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-1ef058c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="1ef058c">
+<div class="elementor-container elementor-column-gap-wide">
+<div class="elementor-row">
+<div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-3f5f0b6" data-element_type="column" data-id="3f5f0b6">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-608cfa3 elementor-widget elementor-widget-gallery" data-element_type="widget" data-id="608cfa3" data-settings="{&quot;gallery_layout&quot;:&quot;masonry&quot;,&quot;columns&quot;:3,&quot;lazyload&quot;:&quot;yes&quot;,&quot;columns_tablet&quot;:2,&quot;columns_mobile&quot;:1,&quot;gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;link_to&quot;:&quot;file&quot;,&quot;overlay_background&quot;:&quot;yes&quot;,&quot;content_hover_animation&quot;:&quot;fade-in&quot;}" data-widget_type="gallery.default">
+<div class="elementor-widget-container">
+<div class="elementor-gallery__container">
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1280" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/0b7c28c0b715404b1904-min.jpg" data-width="1047"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1280" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/0b141f0c86d9718728c8-min.jpg" data-width="824"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1086" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/3fd26be18d43791d2052-min.jpg" data-width="1125"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="877" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/7a20f1b26e679939c076-min.jpg" data-width="1125"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1280" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/23cdaf8a335fc4019d4e-min.jpg" data-width="945"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1113" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/35e13afba32e54700d3f-min.jpg" data-width="1125"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="616" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/043dcf0eb30f44511d1e-min.jpg" data-width="1114"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1057" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/60b2c1af587aaf24f66b-min.jpg" data-width="1116"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1280" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/76e082a91d7cea22b36d-min.jpg" data-width="839"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1280" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/86a0734eea9b1dc5448a-min.jpg" data-width="814"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="943" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/157afab76462933cca73-min.jpg" data-width="1125"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1117" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/970e5a08c6dd318368cc-min.jpg" data-width="1117"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1280" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/6037cf3f56eaa1b4f8fb-min.jpg" data-width="819"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1280" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/15059a1403c1f49fadd0-min.jpg" data-width="892"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1280" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/9438673cf9e90eb757f8-min.jpg" data-width="847"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1632" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/e5b616ad8a787d262469-min.jpg" data-width="1004"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1058" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/e587dd1443c1b49fedd0-min.jpg" data-width="1125"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+
+<div alt="" class="e-gallery-image elementor-gallery-item__image" data-height="1039" data-thumbnail="https://ielts-thanhloan.com/wp-content/uploads/2021/08/e144879a184fef11b65e-min.jpg" data-width="1125"></div>
+
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-widgets">
+<h2 class="genesis-sidebar-title screen-reader-text">Footer</h2>
+
+<div class="wrap">
+<div class="widget-area footer-widgets-1 footer-widget-area">
+<section class="widget widget_nav_menu" id="nav_menu-8">
+<div class="widget-wrap">
+<h3 class="widgettitle widget-title">Giới thiệu</h3>
+
+<div class="menu-footer-1-container">
+<ul class="menu" id="menu-footer-1">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17511" id="menu-item-17511"><a href="https://ielts-thanhloan.com/ve-thanh-loan">Về Thanh Loan</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17513" id="menu-item-17513"><a href="https://ielts-thanhloan.com/cau-hoi-thuong-gap">C&acirc;u hỏi thường gặp</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27077" id="menu-item-27077"><a href="https://ielts-thanhloan.com/huong-dan-thanh-toan">Hướng dẫn thanh to&aacute;n</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27078" id="menu-item-27078"><a href="https://ielts-thanhloan.com/lien-he">Li&ecirc;n hệ IELTS Thanh Loan</a></li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+
+<div class="widget-area footer-widgets-2 footer-widget-area">
+<section class="widget widget_nav_menu" id="nav_menu-4">
+<div class="widget-wrap">
+<h3 class="widgettitle widget-title">Sản phẩm/Dịch vụ</h3>
+
+<div class="menu-footer-2-container">
+<ul class="menu" id="menu-footer-2">
+	<li class="menu-item menu-item-type-post_type menu-item-object-sfwd-courses menu-item-36720" id="menu-item-36720"><a href="https://ielts-thanhloan.com/courses/khoa-hoc-ielts-online-4-ky-nang-academic">Kh&oacute;a học IELTS Online</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-14503" id="menu-item-14503"><a href="https://ielts-thanhloan.com/danh-muc/sach-ielts-thanh-loan-viet">S&aacute;ch IELTS Academic</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-27075" id="menu-item-27075"><a href="https://ielts-thanhloan.com/danh-muc/sach-ielts-general-training">S&aacute;ch IELTS General Training</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27076" id="menu-item-27076"><a href="https://ielts-thanhloan.com/chua-bai-ielts-writing">Dịch vụ chữa b&agrave;i IELTS Writing</a></li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+
+<div class="widget-area footer-widgets-3 footer-widget-area">
+<section class="widget widget_nav_menu" id="nav_menu-7">
+<div class="widget-wrap">
+<h3 class="widgettitle widget-title">Social Media</h3>
+
+<div class="menu-footer-3-container">
+<ul class="menu" id="menu-footer-3">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23740" id="menu-item-23740"><a href="https://www.youtube.com/channel/UCdeWsU_cHDykNbSHtPFsKrg" rel="noopener" target="_blank">IELTS Thanh Loan tr&ecirc;n Youtube</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23741" id="menu-item-23741"><a href="https://www.facebook.com/IELTSThanhLoan" rel="noopener" target="_blank">IELTS Thanh Loan tr&ecirc;n Facebook</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="widget widget_media_image" id="media_image-18">
+<div class="widget-wrap"><a href="http://online.gov.vn/Home/WebDetails/56303"><img alt="" class="image wp-image-19152  attachment-full size-full wp-post-image" data-lazy-src="https://ielts-thanhloan.com/wp-content/uploads/2020/06/logoSaleNoti.png" height="57" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%2057'%3E%3C/svg%3E" style="max-width: 100%; height: auto;" width="150" /><noscript><img width="150" height="57" src="https://ielts-thanhloan.com/wp-content/uploads/2020/06/logoSaleNoti.png" class="image wp-image-19152  attachment-full size-full wp-post-image" alt="" style="max-width: 100%; height: auto;" /></noscript></a></div>
+</section>
+</div>
+</div>
+</div>
+
+<footer class="site-footer">
+<div class="wrap">Bản quyền &copy;&nbsp;2021 - IELTS Thanh Loan</div>
+</footer>
+</div>
+
+<div class="xoo-el-container" style="visibility: hidden;">
+<div class="xoo-el-opac"></div>
+
+<div class="xoo-el-modal">
+<div class="xoo-el-inmodal">
+<div class="xoo-el-wrap">
+<div class="xoo-el-sidebar"></div>
+
+<div class="xoo-el-srcont">
+<div class="xoo-el-main">
+<div class="xoo-el-form-container xoo-el-form-popup" data-active="login">
+<div class="xoo-el-header">
+<ul class="xoo-el-tabs">
+	<li class="xoo-el-login-tgr" data-tab="login">Đăng nhập</li>
+	<li class="xoo-el-reg-tgr" data-tab="register">Đăng k&yacute;</li>
+</ul>
+</div>
+
+<div class="xoo-el-section" data-section="login">
+<div class="xoo-el-fields">
+<div class="xoo-el-notice"></div>
+
+<form class="xoo-el-action-form xoo-el-form-login">
+<div class="xoo-aff-group xoo-el-username_cont">
+<div class="xoo-aff-input-group"><input autocomplete="email" class="xoo-aff-required xoo-aff-text" name="xoo-el-username" placeholder="Email của bạn" required="	" type="text" value="" /></div>
+</div>
+
+<div class="xoo-aff-group xoo-el-password_cont">
+<div class="xoo-aff-input-group"><input class="xoo-aff-required xoo-aff-password" name="xoo-el-password" placeholder="Mật khẩu" required="	" type="password" value="" /></div>
+</div>
+
+<div class="xoo-aff-group xoo-el-login-btm-fields"><label class="xoo-el-form-label"><input name="xoo-el-rememberme" type="checkbox" value="forever" /> <span>Ghi nhớ</span> </label> <a class="xoo-el-lostpw-tgr">Qu&ecirc;n mật khẩu?</a></div>
+<input name="_xoo_el_form" type="hidden" value="login" /><button class="button btn xoo-el-action-btn xoo-el-login-btn" type="submit">Đăng nhập</button> <input name="xoo_el_redirect" type="hidden" value="/" /></form>
+</div>
+</div>
+
+<div class="xoo-el-section" data-section="register">
+<div class="xoo-el-fields">
+<div class="xoo-el-notice"></div>
+
+<form class="xoo-el-action-form xoo-el-form-register">
+<div class="xoo-aff-fields">
+<div class="xoo-aff-group xoo-aff-cont-email one xoo-aff-cont-required xoo_el_reg_email_cont">
+<div class="xoo-aff-input-group"><input autocomplete="email" class="xoo-aff-required xoo-aff-email" name="xoo_el_reg_email" placeholder="Email của bạn" required="	" type="email" value="" /></div>
+</div>
+
+<div class="xoo-aff-group xoo-aff-cont-text one xoo-aff-cont-required xoo_el_reg_fname_cont">
+<div class="xoo-aff-input-group"><input class="xoo-aff-required xoo-aff-text" name="xoo_el_reg_fname" placeholder="Tên của bạn" required="	" type="text" value="" /></div>
+</div>
+
+<div class="xoo-aff-group xoo-aff-cont-password one xoo-aff-cont-required xoo_el_reg_pass_cont">
+<div class="xoo-aff-input-group"><input autocomplete="new-password" class="xoo-aff-required xoo-aff-password" maxlength="20" minlength="6" name="xoo_el_reg_pass" placeholder="Mật khẩu" required="	" type="password" value="" /></div>
+</div>
+</div>
+<input name="_xoo_el_form" type="hidden" value="register" /><button class="button btn xoo-el-action-btn xoo-el-register-btn" type="submit">Đăng k&yacute;</button> <input name="xoo_el_redirect" type="hidden" value="/" /></form>
+</div>
+</div>
+
+<div class="xoo-el-section" data-section="lostpw">
+<div class="xoo-el-fields">
+<div class="xoo-el-notice"></div>
+
+<form class="xoo-el-action-form xoo-el-form-lostpw"><span class="xoo-el-form-txt">Qu&ecirc;n m&acirc;̣t kh&acirc;̉u? Vui l&ograve;ng nhập địa chỉ email của bạn. Bạn sẽ nhận được một li&ecirc;n kết để tạo mật khẩu mới qua email.</span>
+
+<div class="xoo-aff-group user_login_cont">
+<div class="xoo-aff-input-group"><input class="xoo-aff-required xoo-aff-text" name="user_login" placeholder="Email của bạn" required="	" type="text" value="" /></div>
+</div>
+<input name="_xoo_el_form" type="hidden" value="lostPassword" /> <input name="_wp_http_referer" type="hidden" value="/" /><button class="button btn xoo-el-action-btn xoo-el-lostpw-btn" type="submit">Gửi Email</button></form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="xoo-wsc-modal">
+<div class="xoo-wsc-container">
+<div class="xoo-wsc-basket"><span class="xoo-wsc-items-count">0</span></div>
+
+<div class="xoo-wsc-header">
+<div class="xoo-wsch-top">
+<div class="xoo-wsc-notice-container" data-section="cart">
+<ul class="xoo-wsc-notices">
+</ul>
+</div>
+
+<div class="xoo-wsch-basket"><span class="xoo-wscb-count">0</span></div>
+<span class="xoo-wsch-text">GIỎ H&Agrave;NG</span></div>
+</div>
+
+<div class="xoo-wsc-body">
+<div class="xoo-wsc-empty-cart"><span>Giỏ h&agrave;ng trống</span><a class="button btn" href="https://ielts-thanhloan.com/cua-hang">Quay lại</a></div>
+</div>
+
+<div class="xoo-wsc-footer">
+<div class="xoo-wsc-ft-extras"></div>
+
+<div class="xoo-wsc-ft-buttons-cont"></div>
+
+<div class="xoo-wsc-payment-btns"></div>
+</div>
+</div>
+</div>
+
+<div class="xoo-wsc-slider-modal">
+<div class="xoo-wsc-slider">
+<div class="xoo-wsc-notice-container" data-section="slider">
+<ul class="xoo-wsc-notices">
+</ul>
+</div>
+
+<div class="xoo-wsc-sl-content xoo-wsc-sl-shipping" data-slider="shipping">
+<div class="xoo-wsc-sl-heading">Calculate Shipping</div>
+
+<div class="xoo-wsc-sl-body"></div>
+</div>
+
+<div class="xoo-wsc-sl-content xoo-wsc-sl-coupon" data-slider="coupon">
+<div class="xoo-wsc-sl-heading">Sử dụng</div>
+
+<div class="xoo-wsc-sl-body">
+<form class="xoo-wsc-sl-apply-coupon"><input name="xoo-wsc-slcf-input" placeholder="Nhập mã Voucher" type="text" /><button type="submit">Sử dụng</button></form>
+
+<div class="xoo-wsc-clist-cont">
+<div class="xoo-wsc-clist-section xoo-wsc-clist-section-invalid"><span class="xoo-wsc-clist-label">Voucher kh&ocirc;ng khả dụng</span>
+
+<div class="xoo-wsc-coupon-row"><span class="xoo-wsc-cr-code">ebook15off</span> <span class="xoo-wsc-cr-off">Voucher giảm 15%</span> <span class="xoo-wsc-cr-desc">Điều kiện: Đơn mua Ebook lẻ &gt;250k</span></div>
+
+<div class="xoo-wsc-coupon-row"><span class="xoo-wsc-cr-code">ebook20off</span> <span class="xoo-wsc-cr-off">Voucher giảm 20%</span> <span class="xoo-wsc-cr-desc">Điều kiện: Đơn mua Ebook lẻ &gt;450k</span></div>
+
+<div class="xoo-wsc-coupon-row"><span class="xoo-wsc-cr-code">ebook25off</span> <span class="xoo-wsc-cr-off">Voucher giảm 25%</span> <span class="xoo-wsc-cr-desc">Điều kiện: Đơn mua Ebook lẻ &gt;700k</span></div>
+
+<div class="xoo-wsc-coupon-row"><span class="xoo-wsc-cr-code">sachin10off</span> <span class="xoo-wsc-cr-off">Voucher giảm 10%</span> <span class="xoo-wsc-cr-desc">Điều kiện: Đơn s&aacute;ch in lẻ &gt;250k</span></div>
+
+<div class="xoo-wsc-coupon-row"><span class="xoo-wsc-cr-code">sachin15off</span> <span class="xoo-wsc-cr-off">Voucher giảm 15%</span> <span class="xoo-wsc-cr-desc">Điều kiện: Đơn s&aacute;ch in lẻ &gt;900k</span></div>
+
+<div class="xoo-wsc-coupon-row"><span class="xoo-wsc-cr-code">sachin20off</span> <span class="xoo-wsc-cr-off">Voucher giảm 20%</span> <span class="xoo-wsc-cr-desc">Điều kiện: Đơn s&aacute;ch in lẻ &gt;1.5tr</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9GZNM4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) --><script  data-wpmeteor-after="REORDER" type="javascript/blocked">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+<link href="https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/e-gallery/css/e-gallery.min.css?ver=1.2.0" id="elementor-gallery-css" media="all" rel="stylesheet" type="text/css" /><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='eae-main-js-extra'>
+/* <![CDATA[ */
+var eae = {"ajaxurl":"https:\/\/ielts-thanhloan.com\/wp-admin\/admin-ajax.php","current_url":"aHR0cHM6Ly9pZWx0cy10aGFuaGxvYW4uY29tLw==","breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600}};
+var eae_editor = {"plugin_url":"https:\/\/ielts-thanhloan.com\/wp-content\/plugins\/addon-elements-for-elementor-page-builder\/"};
+/* ]]> */
+</script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/addon-elements-for-elementor-page-builder/assets/js/eae.min.js?ver=1.0' id='eae-main-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=1.0' id='font-awesome-4-shim-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/addon-elements-for-elementor-page-builder/assets/js/animated-main.min.js?ver=1.0' id='animated-main-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/addon-elements-for-elementor-page-builder/assets/js/particles.min.js?ver=1.0' id='eae-particles-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/addon-elements-for-elementor-page-builder/assets/lib/magnific.min.js?ver=1.9' id='wts-magnific-js' defer></script><script  data-wpmeteor-after="REORDER" data-minify="1" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/cache/asset-cleanup/js/item/vegas-v86898986391c5747b909328470a04de9e382d001-9ffc6c74c76c1bedda8821b7700eebe9.js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='clicktrack-adrotate-js-extra'>
+/* <![CDATA[ */
+var click_object = {"ajax_url":"https:\/\/ielts-thanhloan.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script><script  data-wpmeteor-after="REORDER" data-minify="1" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/adrotate/library/jquery.adrotate.clicktracker-1f27e9286aacb6b5d2e95bdc788e521b.js' id='clicktrack-adrotate-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='learndash-front-js-extra'>
+/* <![CDATA[ */
+var ldVars = {"postID":"27598","videoReqMsg":"You must watch the video before accessing this content","ajaxurl":"https:\/\/ielts-thanhloan.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script><script  data-wpmeteor-after="REORDER" data-minify="1" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/sfwd-lms/themes/ld30/assets/js/learndash-875115a2af3df4e428ebe76534f9b1e1.js' id='learndash-front-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70' id='jquery-blockui-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='wc-add-to-cart-js-extra'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Xem gi\u1ecf h\u00e0ng","cart_url":"https:\/\/ielts-thanhloan.com\/cart","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=5.4.1' id='wc-add-to-cart-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4' id='js-cookie-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='woocommerce-js-extra'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=5.4.1' id='woocommerce-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='wc-cart-fragments-js-extra'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_fb0f74c9a3676b674664cf16a4d95e41","fragment_name":"wc_fragments_fb0f74c9a3676b674664cf16a4d95e41","request_timeout":"5000"};
+/* ]]> */
+</script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=5.4.1' id='wc-cart-fragments-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/woocommerce/assets/js/select2/select2.full.min.js?ver=4.0.3' id='select2-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='xoo-aff-js-js-extra'>
+/* <![CDATA[ */
+var xoo_aff_localize = {"adminurl":"https:\/\/ielts-thanhloan.com\/wp-admin\/admin-ajax.php","countries":"{\"AF\":\"Afghanistan\",\"AX\":\"\u00c5land Islands\",\"AL\":\"Albania\",\"DZ\":\"Algeria\",\"AS\":\"American Samoa\",\"AD\":\"Andorra\",\"AO\":\"Angola\",\"AI\":\"Anguilla\",\"AQ\":\"Antarctica\",\"AG\":\"Antigua and Barbuda\",\"AR\":\"Argentina\",\"AM\":\"Armenia\",\"AW\":\"Aruba\",\"AU\":\"Australia\",\"AT\":\"Austria\",\"AZ\":\"Azerbaijan\",\"BS\":\"Bahamas\",\"BH\":\"Bahrain\",\"BD\":\"Bangladesh\",\"BB\":\"Barbados\",\"BY\":\"Belarus\",\"BE\":\"Belgium\",\"PW\":\"Belau\",\"BZ\":\"Belize\",\"BJ\":\"Benin\",\"BM\":\"Bermuda\",\"BT\":\"Bhutan\",\"BO\":\"Bolivia\",\"BQ\":\"Bonaire, Saint Eustatius and Saba\",\"BA\":\"Bosnia and Herzegovina\",\"BW\":\"Botswana\",\"BV\":\"Bouvet Island\",\"BR\":\"Brazil\",\"IO\":\"British Indian Ocean Territory\",\"BN\":\"Brunei\",\"BG\":\"Bulgaria\",\"BF\":\"Burkina Faso\",\"BI\":\"Burundi\",\"KH\":\"Cambodia\",\"CM\":\"Cameroon\",\"CA\":\"Canada\",\"CV\":\"Cape Verde\",\"KY\":\"Cayman Islands\",\"CF\":\"Central African Republic\",\"TD\":\"Chad\",\"CL\":\"Chile\",\"CN\":\"China\",\"CX\":\"Christmas Island\",\"CC\":\"Cocos (Keeling) Islands\",\"CO\":\"Colombia\",\"KM\":\"Comoros\",\"CG\":\"Congo (Brazzaville)\",\"CD\":\"Congo (Kinshasa)\",\"CK\":\"Cook Islands\",\"CR\":\"Costa Rica\",\"HR\":\"Croatia\",\"CU\":\"Cuba\",\"CW\":\"Cura\u00e7ao\",\"CY\":\"Cyprus\",\"CZ\":\"Czech Republic\",\"DK\":\"Denmark\",\"DJ\":\"Djibouti\",\"DM\":\"Dominica\",\"DO\":\"Dominican Republic\",\"EC\":\"Ecuador\",\"EG\":\"Egypt\",\"SV\":\"El Salvador\",\"GQ\":\"Equatorial Guinea\",\"ER\":\"Eritrea\",\"EE\":\"Estonia\",\"ET\":\"Ethiopia\",\"FK\":\"Falkland Islands\",\"FO\":\"Faroe Islands\",\"FJ\":\"Fiji\",\"FI\":\"Finland\",\"FR\":\"France\",\"GF\":\"French Guiana\",\"PF\":\"French Polynesia\",\"TF\":\"French Southern Territories\",\"GA\":\"Gabon\",\"GM\":\"Gambia\",\"GE\":\"Georgia\",\"DE\":\"Germany\",\"GH\":\"Ghana\",\"GI\":\"Gibraltar\",\"GR\":\"Greece\",\"GL\":\"Greenland\",\"GD\":\"Grenada\",\"GP\":\"Guadeloupe\",\"GU\":\"Guam\",\"GT\":\"Guatemala\",\"GG\":\"Guernsey\",\"GN\":\"Guinea\",\"GW\":\"Guinea-Bissau\",\"GY\":\"Guyana\",\"HT\":\"Haiti\",\"HM\":\"Heard Island and McDonald Islands\",\"HN\":\"Honduras\",\"HK\":\"Hong Kong\",\"HU\":\"Hungary\",\"IS\":\"Iceland\",\"IN\":\"India\",\"ID\":\"Indonesia\",\"IR\":\"Iran\",\"IQ\":\"Iraq\",\"IE\":\"Ireland\",\"IM\":\"Isle of Man\",\"IL\":\"Israel\",\"IT\":\"Italy\",\"CI\":\"Ivory Coast\",\"JM\":\"Jamaica\",\"JP\":\"Japan\",\"JE\":\"Jersey\",\"JO\":\"Jordan\",\"KZ\":\"Kazakhstan\",\"KE\":\"Kenya\",\"KI\":\"Kiribati\",\"KW\":\"Kuwait\",\"KG\":\"Kyrgyzstan\",\"LA\":\"Laos\",\"LV\":\"Latvia\",\"LB\":\"Lebanon\",\"LS\":\"Lesotho\",\"LR\":\"Liberia\",\"LY\":\"Libya\",\"LI\":\"Liechtenstein\",\"LT\":\"Lithuania\",\"LU\":\"Luxembourg\",\"MO\":\"Macao S.A.R., China\",\"MK\":\"North Macedonia\",\"MG\":\"Madagascar\",\"MW\":\"Malawi\",\"MY\":\"Malaysia\",\"MV\":\"Maldives\",\"ML\":\"Mali\",\"MT\":\"Malta\",\"MH\":\"Marshall Islands\",\"MQ\":\"Martinique\",\"MR\":\"Mauritania\",\"MU\":\"Mauritius\",\"YT\":\"Mayotte\",\"MX\":\"Mexico\",\"FM\":\"Micronesia\",\"MD\":\"Moldova\",\"MC\":\"Monaco\",\"MN\":\"Mongolia\",\"ME\":\"Montenegro\",\"MS\":\"Montserrat\",\"MA\":\"Morocco\",\"MZ\":\"Mozambique\",\"MM\":\"Myanmar\",\"NA\":\"Namibia\",\"NR\":\"Nauru\",\"NP\":\"Nepal\",\"NL\":\"Netherlands\",\"NC\":\"New Caledonia\",\"NZ\":\"New Zealand\",\"NI\":\"Nicaragua\",\"NE\":\"Niger\",\"NG\":\"Nigeria\",\"NU\":\"Niue\",\"NF\":\"Norfolk Island\",\"MP\":\"Northern Mariana Islands\",\"KP\":\"North Korea\",\"NO\":\"Norway\",\"OM\":\"Oman\",\"PK\":\"Pakistan\",\"PS\":\"Palestinian Territory\",\"PA\":\"Panama\",\"PG\":\"Papua New Guinea\",\"PY\":\"Paraguay\",\"PE\":\"Peru\",\"PH\":\"Philippines\",\"PN\":\"Pitcairn\",\"PL\":\"Poland\",\"PT\":\"Portugal\",\"PR\":\"Puerto Rico\",\"QA\":\"Qatar\",\"RE\":\"Reunion\",\"RO\":\"Romania\",\"RU\":\"Russia\",\"RW\":\"Rwanda\",\"BL\":\"Saint Barth\u00e9lemy\",\"SH\":\"Saint Helena\",\"KN\":\"Saint Kitts and Nevis\",\"LC\":\"Saint Lucia\",\"MF\":\"Saint Martin (French part)\",\"SX\":\"Saint Martin (Dutch part)\",\"PM\":\"Saint Pierre and Miquelon\",\"VC\":\"Saint Vincent and the Grenadines\",\"SM\":\"San Marino\",\"ST\":\"S\u00e3o Tom\u00e9 and Pr\u00edncipe\",\"SA\":\"Saudi Arabia\",\"SN\":\"Senegal\",\"RS\":\"Serbia\",\"SC\":\"Seychelles\",\"SL\":\"Sierra Leone\",\"SG\":\"Singapore\",\"SK\":\"Slovakia\",\"SI\":\"Slovenia\",\"SB\":\"Solomon Islands\",\"SO\":\"Somalia\",\"ZA\":\"South Africa\",\"GS\":\"South Georgia\\\/Sandwich Islands\",\"KR\":\"South Korea\",\"SS\":\"South Sudan\",\"ES\":\"Spain\",\"LK\":\"Sri Lanka\",\"SD\":\"Sudan\",\"SR\":\"Suriname\",\"SJ\":\"Svalbard and Jan Mayen\",\"SZ\":\"Swaziland\",\"SE\":\"Sweden\",\"CH\":\"Switzerland\",\"SY\":\"Syria\",\"TW\":\"Taiwan\",\"TJ\":\"Tajikistan\",\"TZ\":\"Tanzania\",\"TH\":\"Thailand\",\"TL\":\"Timor-Leste\",\"TG\":\"Togo\",\"TK\":\"Tokelau\",\"TO\":\"Tonga\",\"TT\":\"Trinidad and Tobago\",\"TN\":\"Tunisia\",\"TR\":\"Turkey\",\"TM\":\"Turkmenistan\",\"TC\":\"Turks and Caicos Islands\",\"TV\":\"Tuvalu\",\"UG\":\"Uganda\",\"UA\":\"Ukraine\",\"AE\":\"United Arab Emirates\",\"GB\":\"United Kingdom (UK)\",\"US\":\"United States (US)\",\"UM\":\"United States (US) Minor Outlying Islands\",\"UY\":\"Uruguay\",\"UZ\":\"Uzbekistan\",\"VU\":\"Vanuatu\",\"VA\":\"Vatican\",\"VE\":\"Venezuela\",\"VN\":\"Vietnam\",\"VG\":\"Virgin Islands (British)\",\"VI\":\"Virgin Islands (US)\",\"WF\":\"Wallis and Futuna\",\"EH\":\"Western Sahara\",\"WS\":\"Samoa\",\"YE\":\"Yemen\",\"ZM\":\"Zambia\",\"ZW\":\"Zimbabwe\"}","states":"{\"AF\":[],\"AO\":{\"BGO\":\"Bengo\",\"BLU\":\"Benguela\",\"BIE\":\"Bi\\u00e9\",\"CAB\":\"Cabinda\",\"CNN\":\"Cunene\",\"HUA\":\"Huambo\",\"HUI\":\"Hu\\u00edla\",\"CCU\":\"Kuando Kubango\",\"CNO\":\"Kwanza-Norte\",\"CUS\":\"Kwanza-Sul\",\"LUA\":\"Luanda\",\"LNO\":\"Lunda-Norte\",\"LSU\":\"Lunda-Sul\",\"MAL\":\"Malanje\",\"MOX\":\"Moxico\",\"NAM\":\"Namibe\",\"UIG\":\"U\\u00edge\",\"ZAI\":\"Zaire\"},\"AR\":{\"C\":\"Ciudad Aut\u00f3noma de Buenos Aires\",\"B\":\"Buenos Aires\",\"K\":\"Catamarca\",\"H\":\"Chaco\",\"U\":\"Chubut\",\"X\":\"C\u00f3rdoba\",\"W\":\"Corrientes\",\"E\":\"Entre R\u00edos\",\"P\":\"Formosa\",\"Y\":\"Jujuy\",\"L\":\"La Pampa\",\"F\":\"La Rioja\",\"M\":\"Mendoza\",\"N\":\"Misiones\",\"Q\":\"Neuqu\u00e9n\",\"R\":\"R\u00edo Negro\",\"A\":\"Salta\",\"J\":\"San Juan\",\"D\":\"San Luis\",\"Z\":\"Santa Cruz\",\"S\":\"Santa Fe\",\"G\":\"Santiago del Estero\",\"V\":\"Tierra del Fuego\",\"T\":\"Tucum\u00e1n\"},\"AT\":[],\"AU\":{\"ACT\":\"Australian Capital Territory\",\"NSW\":\"New South Wales\",\"NT\":\"Northern Territory\",\"QLD\":\"Queensland\",\"SA\":\"South Australia\",\"TAS\":\"Tasmania\",\"VIC\":\"Victoria\",\"WA\":\"Western Australia\"},\"AX\":[],\"BD\":{\"BD-05\":\"Bagerhat\",\"BD-01\":\"Bandarban\",\"BD-02\":\"Barguna\",\"BD-06\":\"Barishal\",\"BD-07\":\"Bhola\",\"BD-03\":\"Bogura\",\"BD-04\":\"Brahmanbaria\",\"BD-09\":\"Chandpur\",\"BD-10\":\"Chattogram\",\"BD-12\":\"Chuadanga\",\"BD-11\":\"Cox's Bazar\",\"BD-08\":\"Cumilla\",\"BD-13\":\"Dhaka\",\"BD-14\":\"Dinajpur\",\"BD-15\":\"Faridpur \",\"BD-16\":\"Feni\",\"BD-19\":\"Gaibandha\",\"BD-18\":\"Gazipur\",\"BD-17\":\"Gopalganj\",\"BD-20\":\"Habiganj\",\"BD-21\":\"Jamalpur\",\"BD-22\":\"Jashore\",\"BD-25\":\"Jhalokati\",\"BD-23\":\"Jhenaidah\",\"BD-24\":\"Joypurhat\",\"BD-29\":\"Khagrachhari\",\"BD-27\":\"Khulna\",\"BD-26\":\"Kishoreganj\",\"BD-28\":\"Kurigram\",\"BD-30\":\"Kushtia\",\"BD-31\":\"Lakshmipur\",\"BD-32\":\"Lalmonirhat\",\"BD-36\":\"Madaripur\",\"BD-37\":\"Magura\",\"BD-33\":\"Manikganj \",\"BD-39\":\"Meherpur\",\"BD-38\":\"Moulvibazar\",\"BD-35\":\"Munshiganj\",\"BD-34\":\"Mymensingh\",\"BD-48\":\"Naogaon\",\"BD-43\":\"Narail\",\"BD-40\":\"Narayanganj\",\"BD-42\":\"Narsingdi\",\"BD-44\":\"Natore\",\"BD-45\":\"Nawabganj\",\"BD-41\":\"Netrakona\",\"BD-46\":\"Nilphamari\",\"BD-47\":\"Noakhali\",\"BD-49\":\"Pabna\",\"BD-52\":\"Panchagarh\",\"BD-51\":\"Patuakhali\",\"BD-50\":\"Pirojpur\",\"BD-53\":\"Rajbari\",\"BD-54\":\"Rajshahi\",\"BD-56\":\"Rangamati\",\"BD-55\":\"Rangpur\",\"BD-58\":\"Satkhira\",\"BD-62\":\"Shariatpur\",\"BD-57\":\"Sherpur\",\"BD-59\":\"Sirajganj\",\"BD-61\":\"Sunamganj\",\"BD-60\":\"Sylhet\",\"BD-63\":\"Tangail\",\"BD-64\":\"Thakurgaon\"},\"BE\":[],\"BG\":{\"BG-01\":\"Blagoevgrad\",\"BG-02\":\"Burgas\",\"BG-08\":\"Dobrich\",\"BG-07\":\"Gabrovo\",\"BG-26\":\"Haskovo\",\"BG-09\":\"Kardzhali\",\"BG-10\":\"Kyustendil\",\"BG-11\":\"Lovech\",\"BG-12\":\"Montana\",\"BG-13\":\"Pazardzhik\",\"BG-14\":\"Pernik\",\"BG-15\":\"Pleven\",\"BG-16\":\"Plovdiv\",\"BG-17\":\"Razgrad\",\"BG-18\":\"Ruse\",\"BG-27\":\"Shumen\",\"BG-19\":\"Silistra\",\"BG-20\":\"Sliven\",\"BG-21\":\"Smolyan\",\"BG-23\":\"Sofia\",\"BG-22\":\"Sofia-Grad\",\"BG-24\":\"Stara Zagora\",\"BG-25\":\"Targovishte\",\"BG-03\":\"Varna\",\"BG-04\":\"Veliko Tarnovo\",\"BG-05\":\"Vidin\",\"BG-06\":\"Vratsa\",\"BG-28\":\"Yambol\"},\"BH\":[],\"BI\":[],\"BO\":{\"B\":\"Chuquisaca\",\"H\":\"Beni\",\"C\":\"Cochabamba\",\"L\":\"La Paz\",\"O\":\"Oruro\",\"N\":\"Pando\",\"P\":\"Potos\\u00ed\",\"S\":\"Santa Cruz\",\"T\":\"Tarija\"},\"BR\":{\"AC\":\"Acre\",\"AL\":\"Alagoas\",\"AP\":\"Amap\u00e1\",\"AM\":\"Amazonas\",\"BA\":\"Bahia\",\"CE\":\"Cear\u00e1\",\"DF\":\"Distrito Federal\",\"ES\":\"Esp\u00edrito Santo\",\"GO\":\"Goi\u00e1s\",\"MA\":\"Maranh\u00e3o\",\"MT\":\"Mato Grosso\",\"MS\":\"Mato Grosso do Sul\",\"MG\":\"Minas Gerais\",\"PA\":\"Par\u00e1\",\"PB\":\"Para\u00edba\",\"PR\":\"Paran\u00e1\",\"PE\":\"Pernambuco\",\"PI\":\"Piau\u00ed\",\"RJ\":\"Rio de Janeiro\",\"RN\":\"Rio Grande do Norte\",\"RS\":\"Rio Grande do Sul\",\"RO\":\"Rond\u00f4nia\",\"RR\":\"Roraima\",\"SC\":\"Santa Catarina\",\"SP\":\"S\u00e3o Paulo\",\"SE\":\"Sergipe\",\"TO\":\"Tocantins\"},\"CA\":{\"AB\":\"Alberta\",\"BC\":\"British Columbia\",\"MB\":\"Manitoba\",\"NB\":\"New Brunswick\",\"NL\":\"Newfoundland and Labrador\",\"NT\":\"Northwest Territories\",\"NS\":\"Nova Scotia\",\"NU\":\"Nunavut\",\"ON\":\"Ontario\",\"PE\":\"Prince Edward Island\",\"QC\":\"Quebec\",\"SK\":\"Saskatchewan\",\"YT\":\"Yukon Territory\"},\"CH\":{\"AG\":\"Aargau\",\"AR\":\"Appenzell Ausserrhoden\",\"AI\":\"Appenzell Innerrhoden\",\"BL\":\"Basel-Landschaft\",\"BS\":\"Basel-Stadt\",\"BE\":\"Bern\",\"FR\":\"Fribourg\",\"GE\":\"Geneva\",\"GL\":\"Glarus\",\"GR\":\"Graub\u00fcnden\",\"JU\":\"Jura\",\"LU\":\"Luzern\",\"NE\":\"Neuch\u00e2tel\",\"NW\":\"Nidwalden\",\"OW\":\"Obwalden\",\"SH\":\"Schaffhausen\",\"SZ\":\"Schwyz\",\"SO\":\"Solothurn\",\"SG\":\"St. Gallen\",\"TG\":\"Thurgau\",\"TI\":\"Ticino\",\"UR\":\"Uri\",\"VS\":\"Valais\",\"VD\":\"Vaud\",\"ZG\":\"Zug\",\"ZH\":\"Z\u00fcrich\"},\"CN\":{\"CN1\":\"Yunnan \\\/ \u4e91\u5357\",\"CN2\":\"Beijing \\\/ \u5317\u4eac\",\"CN3\":\"Tianjin \\\/ \u5929\u6d25\",\"CN4\":\"Hebei \\\/ \u6cb3\u5317\",\"CN5\":\"Shanxi \\\/ \u5c71\u897f\",\"CN6\":\"Inner Mongolia \\\/ \u5167\u8499\u53e4\",\"CN7\":\"Liaoning \\\/ \u8fbd\u5b81\",\"CN8\":\"Jilin \\\/ \u5409\u6797\",\"CN9\":\"Heilongjiang \\\/ \u9ed1\u9f99\u6c5f\",\"CN10\":\"Shanghai \\\/ \u4e0a\u6d77\",\"CN11\":\"Jiangsu \\\/ \u6c5f\u82cf\",\"CN12\":\"Zhejiang \\\/ \u6d59\u6c5f\",\"CN13\":\"Anhui \\\/ \u5b89\u5fbd\",\"CN14\":\"Fujian \\\/ \u798f\u5efa\",\"CN15\":\"Jiangxi \\\/ \u6c5f\u897f\",\"CN16\":\"Shandong \\\/ \u5c71\u4e1c\",\"CN17\":\"Henan \\\/ \u6cb3\u5357\",\"CN18\":\"Hubei \\\/ \u6e56\u5317\",\"CN19\":\"Hunan \\\/ \u6e56\u5357\",\"CN20\":\"Guangdong \\\/ \u5e7f\u4e1c\",\"CN21\":\"Guangxi Zhuang \\\/ \u5e7f\u897f\u58ee\u65cf\",\"CN22\":\"Hainan \\\/ \u6d77\u5357\",\"CN23\":\"Chongqing \\\/ \u91cd\u5e86\",\"CN24\":\"Sichuan \\\/ \u56db\u5ddd\",\"CN25\":\"Guizhou \\\/ \u8d35\u5dde\",\"CN26\":\"Shaanxi \\\/ \u9655\u897f\",\"CN27\":\"Gansu \\\/ \u7518\u8083\",\"CN28\":\"Qinghai \\\/ \u9752\u6d77\",\"CN29\":\"Ningxia Hui \\\/ \u5b81\u590f\",\"CN30\":\"Macau \\\/ \u6fb3\u95e8\",\"CN31\":\"Tibet \\\/ \u897f\u85cf\",\"CN32\":\"Xinjiang \\\/ \u65b0\u7586\"},\"CZ\":[],\"DE\":[],\"DK\":[],\"EE\":[],\"ES\":{\"C\":\"A Coru\u00f1a\",\"VI\":\"Araba\\\/\u00c1lava\",\"AB\":\"Albacete\",\"A\":\"Alicante\",\"AL\":\"Almer\u00eda\",\"O\":\"Asturias\",\"AV\":\"\u00c1vila\",\"BA\":\"Badajoz\",\"PM\":\"Baleares\",\"B\":\"Barcelona\",\"BU\":\"Burgos\",\"CC\":\"C\u00e1ceres\",\"CA\":\"C\u00e1diz\",\"S\":\"Cantabria\",\"CS\":\"Castell\u00f3n\",\"CE\":\"Ceuta\",\"CR\":\"Ciudad Real\",\"CO\":\"C\u00f3rdoba\",\"CU\":\"Cuenca\",\"GI\":\"Girona\",\"GR\":\"Granada\",\"GU\":\"Guadalajara\",\"SS\":\"Gipuzkoa\",\"H\":\"Huelva\",\"HU\":\"Huesca\",\"J\":\"Ja\u00e9n\",\"LO\":\"La Rioja\",\"GC\":\"Las Palmas\",\"LE\":\"Le\u00f3n\",\"L\":\"Lleida\",\"LU\":\"Lugo\",\"M\":\"Madrid\",\"MA\":\"M\u00e1laga\",\"ML\":\"Melilla\",\"MU\":\"Murcia\",\"NA\":\"Navarra\",\"OR\":\"Ourense\",\"P\":\"Palencia\",\"PO\":\"Pontevedra\",\"SA\":\"Salamanca\",\"TF\":\"Santa Cruz de Tenerife\",\"SG\":\"Segovia\",\"SE\":\"Sevilla\",\"SO\":\"Soria\",\"T\":\"Tarragona\",\"TE\":\"Teruel\",\"TO\":\"Toledo\",\"V\":\"Valencia\",\"VA\":\"Valladolid\",\"BI\":\"Bizkaia\",\"ZA\":\"Zamora\",\"Z\":\"Zaragoza\"},\"FI\":[],\"FR\":[],\"GP\":[],\"GR\":{\"I\":\"\\u0391\\u03c4\\u03c4\\u03b9\\u03ba\\u03ae\",\"A\":\"\\u0391\\u03bd\\u03b1\\u03c4\\u03bf\\u03bb\\u03b9\\u03ba\\u03ae \\u039c\\u03b1\\u03ba\\u03b5\\u03b4\\u03bf\\u03bd\\u03af\\u03b1 \\u03ba\\u03b1\\u03b9 \\u0398\\u03c1\\u03ac\\u03ba\\u03b7\",\"B\":\"\\u039a\\u03b5\\u03bd\\u03c4\\u03c1\\u03b9\\u03ba\\u03ae \\u039c\\u03b1\\u03ba\\u03b5\\u03b4\\u03bf\\u03bd\\u03af\\u03b1\",\"C\":\"\\u0394\\u03c5\\u03c4\\u03b9\\u03ba\\u03ae \\u039c\\u03b1\\u03ba\\u03b5\\u03b4\\u03bf\\u03bd\\u03af\\u03b1\",\"D\":\"\\u0389\\u03c0\\u03b5\\u03b9\\u03c1\\u03bf\\u03c2\",\"E\":\"\\u0398\\u03b5\\u03c3\\u03c3\\u03b1\\u03bb\\u03af\\u03b1\",\"F\":\"\\u0399\\u03cc\\u03bd\\u03b9\\u03bf\\u03b9 \\u039d\\u03ae\\u03c3\\u03bf\\u03b9\",\"G\":\"\\u0394\\u03c5\\u03c4\\u03b9\\u03ba\\u03ae \\u0395\\u03bb\\u03bb\\u03ac\\u03b4\\u03b1\",\"H\":\"\\u03a3\\u03c4\\u03b5\\u03c1\\u03b5\\u03ac \\u0395\\u03bb\\u03bb\\u03ac\\u03b4\\u03b1\",\"J\":\"\\u03a0\\u03b5\\u03bb\\u03bf\\u03c0\\u03cc\\u03bd\\u03bd\\u03b7\\u03c3\\u03bf\\u03c2\",\"K\":\"\\u0392\\u03cc\\u03c1\\u03b5\\u03b9\\u03bf \\u0391\\u03b9\\u03b3\\u03b1\\u03af\\u03bf\",\"L\":\"\\u039d\\u03cc\\u03c4\\u03b9\\u03bf \\u0391\\u03b9\\u03b3\\u03b1\\u03af\\u03bf\",\"M\":\"\\u039a\\u03c1\\u03ae\\u03c4\\u03b7\"},\"GF\":[],\"HK\":{\"HONG KONG\":\"Hong Kong Island\",\"KOWLOON\":\"Kowloon\",\"NEW TERRITORIES\":\"New Territories\"},\"HU\":{\"BK\":\"B\\u00e1cs-Kiskun\",\"BE\":\"B\\u00e9k\\u00e9s\",\"BA\":\"Baranya\",\"BZ\":\"Borsod-Aba\\u00faj-Zempl\\u00e9n\",\"BU\":\"Budapest\",\"CS\":\"Csongr\\u00e1d\",\"FE\":\"Fej\\u00e9r\",\"GS\":\"Gy\\u0151r-Moson-Sopron\",\"HB\":\"Hajd\\u00fa-Bihar\",\"HE\":\"Heves\",\"JN\":\"J\\u00e1sz-Nagykun-Szolnok\",\"KE\":\"Kom\\u00e1rom-Esztergom\",\"NO\":\"N\\u00f3gr\\u00e1d\",\"PE\":\"Pest\",\"SO\":\"Somogy\",\"SZ\":\"Szabolcs-Szatm\\u00e1r-Bereg\",\"TO\":\"Tolna\",\"VA\":\"Vas\",\"VE\":\"Veszpr\\u00e9m\",\"ZA\":\"Zala\"},\"ID\":{\"AC\":\"Daerah Istimewa Aceh\",\"SU\":\"Sumatera Utara\",\"SB\":\"Sumatera Barat\",\"RI\":\"Riau\",\"KR\":\"Kepulauan Riau\",\"JA\":\"Jambi\",\"SS\":\"Sumatera Selatan\",\"BB\":\"Bangka Belitung\",\"BE\":\"Bengkulu\",\"LA\":\"Lampung\",\"JK\":\"DKI Jakarta\",\"JB\":\"Jawa Barat\",\"BT\":\"Banten\",\"JT\":\"Jawa Tengah\",\"JI\":\"Jawa Timur\",\"YO\":\"Daerah Istimewa Yogyakarta\",\"BA\":\"Bali\",\"NB\":\"Nusa Tenggara Barat\",\"NT\":\"Nusa Tenggara Timur\",\"KB\":\"Kalimantan Barat\",\"KT\":\"Kalimantan Tengah\",\"KI\":\"Kalimantan Timur\",\"KS\":\"Kalimantan Selatan\",\"KU\":\"Kalimantan Utara\",\"SA\":\"Sulawesi Utara\",\"ST\":\"Sulawesi Tengah\",\"SG\":\"Sulawesi Tenggara\",\"SR\":\"Sulawesi Barat\",\"SN\":\"Sulawesi Selatan\",\"GO\":\"Gorontalo\",\"MA\":\"Maluku\",\"MU\":\"Maluku Utara\",\"PA\":\"Papua\",\"PB\":\"Papua Barat\"},\"IE\":{\"CW\":\"Carlow\",\"CN\":\"Cavan\",\"CE\":\"Clare\",\"CO\":\"Cork\",\"DL\":\"Donegal\",\"D\":\"Dublin\",\"G\":\"Galway\",\"KY\":\"Kerry\",\"KE\":\"Kildare\",\"KK\":\"Kilkenny\",\"LS\":\"Laois\",\"LM\":\"Leitrim\",\"LK\":\"Limerick\",\"LD\":\"Longford\",\"LH\":\"Louth\",\"MO\":\"Mayo\",\"MH\":\"Meath\",\"MN\":\"Monaghan\",\"OY\":\"Offaly\",\"RN\":\"Roscommon\",\"SO\":\"Sligo\",\"TA\":\"Tipperary\",\"WD\":\"Waterford\",\"WH\":\"Westmeath\",\"WX\":\"Wexford\",\"WW\":\"Wicklow\"},\"IN\":{\"AP\":\"Andhra Pradesh\",\"AR\":\"Arunachal Pradesh\",\"AS\":\"Assam\",\"BR\":\"Bihar\",\"CT\":\"Chhattisgarh\",\"GA\":\"Goa\",\"GJ\":\"Gujarat\",\"HR\":\"Haryana\",\"HP\":\"Himachal Pradesh\",\"JK\":\"Jammu and Kashmir\",\"JH\":\"Jharkhand\",\"KA\":\"Karnataka\",\"KL\":\"Kerala\",\"MP\":\"Madhya Pradesh\",\"MH\":\"Maharashtra\",\"MN\":\"Manipur\",\"ML\":\"Meghalaya\",\"MZ\":\"Mizoram\",\"NL\":\"Nagaland\",\"OR\":\"Orissa\",\"PB\":\"Punjab\",\"RJ\":\"Rajasthan\",\"SK\":\"Sikkim\",\"TN\":\"Tamil Nadu\",\"TS\":\"Telangana\",\"TR\":\"Tripura\",\"UK\":\"Uttarakhand\",\"UP\":\"Uttar Pradesh\",\"WB\":\"West Bengal\",\"AN\":\"Andaman and Nicobar Islands\",\"CH\":\"Chandigarh\",\"DN\":\"Dadra and Nagar Haveli\",\"DD\":\"Daman and Diu\",\"DL\":\"Delhi\",\"LD\":\"Lakshadeep\",\"PY\":\"Pondicherry (Puducherry)\"},\"IR\":{\"KHZ\":\"Khuzestan  (\\u062e\\u0648\\u0632\\u0633\\u062a\\u0627\\u0646)\",\"THR\":\"Tehran  (\\u062a\\u0647\\u0631\\u0627\\u0646)\",\"ILM\":\"Ilaam (\\u0627\\u06cc\\u0644\\u0627\\u0645)\",\"BHR\":\"Bushehr (\\u0628\\u0648\\u0634\\u0647\\u0631)\",\"ADL\":\"Ardabil (\\u0627\\u0631\\u062f\\u0628\\u06cc\\u0644)\",\"ESF\":\"Isfahan (\\u0627\\u0635\\u0641\\u0647\\u0627\\u0646)\",\"YZD\":\"Yazd (\\u06cc\\u0632\\u062f)\",\"KRH\":\"Kermanshah (\\u06a9\\u0631\\u0645\\u0627\\u0646\\u0634\\u0627\\u0647)\",\"KRN\":\"Kerman (\\u06a9\\u0631\\u0645\\u0627\\u0646)\",\"HDN\":\"Hamadan (\\u0647\\u0645\\u062f\\u0627\\u0646)\",\"GZN\":\"Ghazvin (\\u0642\\u0632\\u0648\\u06cc\\u0646)\",\"ZJN\":\"Zanjan (\\u0632\\u0646\\u062c\\u0627\\u0646)\",\"LRS\":\"Luristan (\\u0644\\u0631\\u0633\\u062a\\u0627\\u0646)\",\"ABZ\":\"Alborz (\\u0627\\u0644\\u0628\\u0631\\u0632)\",\"EAZ\":\"East Azarbaijan (\\u0622\\u0630\\u0631\\u0628\\u0627\\u06cc\\u062c\\u0627\\u0646 \\u0634\\u0631\\u0642\\u06cc)\",\"WAZ\":\"West Azarbaijan (\\u0622\\u0630\\u0631\\u0628\\u0627\\u06cc\\u062c\\u0627\\u0646 \\u063a\\u0631\\u0628\\u06cc)\",\"CHB\":\"Chaharmahal and Bakhtiari (\\u0686\\u0647\\u0627\\u0631\\u0645\\u062d\\u0627\\u0644 \\u0648 \\u0628\\u062e\\u062a\\u06cc\\u0627\\u0631\\u06cc)\",\"SKH\":\"South Khorasan (\\u062e\\u0631\\u0627\\u0633\\u0627\\u0646 \\u062c\\u0646\\u0648\\u0628\\u06cc)\",\"RKH\":\"Razavi Khorasan (\\u062e\\u0631\\u0627\\u0633\\u0627\\u0646 \\u0631\\u0636\\u0648\\u06cc)\",\"NKH\":\"North Khorasan (\\u062e\\u0631\\u0627\\u0633\\u0627\\u0646 \\u0634\\u0645\\u0627\\u0644\\u06cc)\",\"SMN\":\"Semnan (\\u0633\\u0645\\u0646\\u0627\\u0646)\",\"FRS\":\"Fars (\\u0641\\u0627\\u0631\\u0633)\",\"QHM\":\"Qom (\\u0642\\u0645)\",\"KRD\":\"Kurdistan \\\/ \\u06a9\\u0631\\u062f\\u0633\\u062a\\u0627\\u0646)\",\"KBD\":\"Kohgiluyeh and BoyerAhmad (\\u06a9\\u0647\\u06af\\u06cc\\u0644\\u0648\\u06cc\\u06cc\\u0647 \\u0648 \\u0628\\u0648\\u06cc\\u0631\\u0627\\u062d\\u0645\\u062f)\",\"GLS\":\"Golestan (\\u06af\\u0644\\u0633\\u062a\\u0627\\u0646)\",\"GIL\":\"Gilan (\\u06af\\u06cc\\u0644\\u0627\\u0646)\",\"MZN\":\"Mazandaran (\\u0645\\u0627\\u0632\\u0646\\u062f\\u0631\\u0627\\u0646)\",\"MKZ\":\"Markazi (\\u0645\\u0631\\u06a9\\u0632\\u06cc)\",\"HRZ\":\"Hormozgan (\\u0647\\u0631\\u0645\\u0632\\u06af\\u0627\\u0646)\",\"SBN\":\"Sistan and Baluchestan (\\u0633\\u06cc\\u0633\\u062a\\u0627\\u0646 \\u0648 \\u0628\\u0644\\u0648\\u0686\\u0633\\u062a\\u0627\\u0646)\"},\"IS\":[],\"IT\":{\"AG\":\"Agrigento\",\"AL\":\"Alessandria\",\"AN\":\"Ancona\",\"AO\":\"Aosta\",\"AR\":\"Arezzo\",\"AP\":\"Ascoli Piceno\",\"AT\":\"Asti\",\"AV\":\"Avellino\",\"BA\":\"Bari\",\"BT\":\"Barletta-Andria-Trani\",\"BL\":\"Belluno\",\"BN\":\"Benevento\",\"BG\":\"Bergamo\",\"BI\":\"Biella\",\"BO\":\"Bologna\",\"BZ\":\"Bolzano\",\"BS\":\"Brescia\",\"BR\":\"Brindisi\",\"CA\":\"Cagliari\",\"CL\":\"Caltanissetta\",\"CB\":\"Campobasso\",\"CE\":\"Caserta\",\"CT\":\"Catania\",\"CZ\":\"Catanzaro\",\"CH\":\"Chieti\",\"CO\":\"Como\",\"CS\":\"Cosenza\",\"CR\":\"Cremona\",\"KR\":\"Crotone\",\"CN\":\"Cuneo\",\"EN\":\"Enna\",\"FM\":\"Fermo\",\"FE\":\"Ferrara\",\"FI\":\"Firenze\",\"FG\":\"Foggia\",\"FC\":\"Forl\\u00ec-Cesena\",\"FR\":\"Frosinone\",\"GE\":\"Genova\",\"GO\":\"Gorizia\",\"GR\":\"Grosseto\",\"IM\":\"Imperia\",\"IS\":\"Isernia\",\"SP\":\"La Spezia\",\"AQ\":\"L'Aquila\",\"LT\":\"Latina\",\"LE\":\"Lecce\",\"LC\":\"Lecco\",\"LI\":\"Livorno\",\"LO\":\"Lodi\",\"LU\":\"Lucca\",\"MC\":\"Macerata\",\"MN\":\"Mantova\",\"MS\":\"Massa-Carrara\",\"MT\":\"Matera\",\"ME\":\"Messina\",\"MI\":\"Milano\",\"MO\":\"Modena\",\"MB\":\"Monza e della Brianza\",\"NA\":\"Napoli\",\"NO\":\"Novara\",\"NU\":\"Nuoro\",\"OR\":\"Oristano\",\"PD\":\"Padova\",\"PA\":\"Palermo\",\"PR\":\"Parma\",\"PV\":\"Pavia\",\"PG\":\"Perugia\",\"PU\":\"Pesaro e Urbino\",\"PE\":\"Pescara\",\"PC\":\"Piacenza\",\"PI\":\"Pisa\",\"PT\":\"Pistoia\",\"PN\":\"Pordenone\",\"PZ\":\"Potenza\",\"PO\":\"Prato\",\"RG\":\"Ragusa\",\"RA\":\"Ravenna\",\"RC\":\"Reggio Calabria\",\"RE\":\"Reggio Emilia\",\"RI\":\"Rieti\",\"RN\":\"Rimini\",\"RM\":\"Roma\",\"RO\":\"Rovigo\",\"SA\":\"Salerno\",\"SS\":\"Sassari\",\"SV\":\"Savona\",\"SI\":\"Siena\",\"SR\":\"Siracusa\",\"SO\":\"Sondrio\",\"SU\":\"Sud Sardegna\",\"TA\":\"Taranto\",\"TE\":\"Teramo\",\"TR\":\"Terni\",\"TO\":\"Torino\",\"TP\":\"Trapani\",\"TN\":\"Trento\",\"TV\":\"Treviso\",\"TS\":\"Trieste\",\"UD\":\"Udine\",\"VA\":\"Varese\",\"VE\":\"Venezia\",\"VB\":\"Verbano-Cusio-Ossola\",\"VC\":\"Vercelli\",\"VR\":\"Verona\",\"VV\":\"Vibo Valentia\",\"VI\":\"Vicenza\",\"VT\":\"Viterbo\"},\"IL\":[],\"IM\":[],\"JP\":{\"JP01\":\"Hokkaido\",\"JP02\":\"Aomori\",\"JP03\":\"Iwate\",\"JP04\":\"Miyagi\",\"JP05\":\"Akita\",\"JP06\":\"Yamagata\",\"JP07\":\"Fukushima\",\"JP08\":\"Ibaraki\",\"JP09\":\"Tochigi\",\"JP10\":\"Gunma\",\"JP11\":\"Saitama\",\"JP12\":\"Chiba\",\"JP13\":\"Tokyo\",\"JP14\":\"Kanagawa\",\"JP15\":\"Niigata\",\"JP16\":\"Toyama\",\"JP17\":\"Ishikawa\",\"JP18\":\"Fukui\",\"JP19\":\"Yamanashi\",\"JP20\":\"Nagano\",\"JP21\":\"Gifu\",\"JP22\":\"Shizuoka\",\"JP23\":\"Aichi\",\"JP24\":\"Mie\",\"JP25\":\"Shiga\",\"JP26\":\"Kyoto\",\"JP27\":\"Osaka\",\"JP28\":\"Hyogo\",\"JP29\":\"Nara\",\"JP30\":\"Wakayama\",\"JP31\":\"Tottori\",\"JP32\":\"Shimane\",\"JP33\":\"Okayama\",\"JP34\":\"Hiroshima\",\"JP35\":\"Yamaguchi\",\"JP36\":\"Tokushima\",\"JP37\":\"Kagawa\",\"JP38\":\"Ehime\",\"JP39\":\"Kochi\",\"JP40\":\"Fukuoka\",\"JP41\":\"Saga\",\"JP42\":\"Nagasaki\",\"JP43\":\"Kumamoto\",\"JP44\":\"Oita\",\"JP45\":\"Miyazaki\",\"JP46\":\"Kagoshima\",\"JP47\":\"Okinawa\"},\"KR\":[],\"KW\":[],\"LB\":[],\"LR\":{\"BM\":\"Bomi\",\"BN\":\"Bong\",\"GA\":\"Gbarpolu\",\"GB\":\"Grand Bassa\",\"GC\":\"Grand Cape Mount\",\"GG\":\"Grand Gedeh\",\"GK\":\"Grand Kru\",\"LO\":\"Lofa\",\"MA\":\"Margibi\",\"MY\":\"Maryland\",\"MO\":\"Montserrado\",\"NM\":\"Nimba\",\"RV\":\"Rivercess\",\"RG\":\"River Gee\",\"SN\":\"Sinoe\"},\"LU\":[],\"MD\":{\"C\":\"Chi\u0219in\u0103u\",\"BL\":\"B\u0103l\u021bi\",\"AN\":\"Anenii Noi\",\"BS\":\"Basarabeasca\",\"BR\":\"Briceni\",\"CH\":\"Cahul\",\"CT\":\"Cantemir\",\"CL\":\"C\u0103l\u0103ra\u0219i\",\"CS\":\"C\u0103u\u0219eni\",\"CM\":\"Cimi\u0219lia\",\"CR\":\"Criuleni\",\"DN\":\"Dondu\u0219eni\",\"DR\":\"Drochia\",\"DB\":\"Dub\u0103sari\",\"ED\":\"Edine\u021b\",\"FL\":\"F\u0103le\u0219ti\",\"FR\":\"Flore\u0219ti\",\"GE\":\"UTA G\u0103g\u0103uzia\",\"GL\":\"Glodeni\",\"HN\":\"H\u00eence\u0219ti\",\"IL\":\"Ialoveni\",\"LV\":\"Leova\",\"NS\":\"Nisporeni\",\"OC\":\"Ocni\u021ba\",\"OR\":\"Orhei\",\"RZ\":\"Rezina\",\"RS\":\"R\u00ee\u0219cani\",\"SG\":\"S\u00eengerei\",\"SR\":\"Soroca\",\"ST\":\"Str\u0103\u0219eni\",\"SD\":\"\u0218old\u0103ne\u0219ti\",\"SV\":\"\u0218tefan Vod\u0103\",\"TR\":\"Taraclia\",\"TL\":\"Telene\u0219ti\",\"UN\":\"Ungheni\"},\"MQ\":[],\"MT\":[],\"MX\":{\"DF\":\"Ciudad de M\u00e9xico\",\"JA\":\"Jalisco\",\"NL\":\"Nuevo Le\u00f3n\",\"AG\":\"Aguascalientes\",\"BC\":\"Baja California\",\"BS\":\"Baja California Sur\",\"CM\":\"Campeche\",\"CS\":\"Chiapas\",\"CH\":\"Chihuahua\",\"CO\":\"Coahuila\",\"CL\":\"Colima\",\"DG\":\"Durango\",\"GT\":\"Guanajuato\",\"GR\":\"Guerrero\",\"HG\":\"Hidalgo\",\"MX\":\"Estado de M\u00e9xico\",\"MI\":\"Michoac\u00e1n\",\"MO\":\"Morelos\",\"NA\":\"Nayarit\",\"OA\":\"Oaxaca\",\"PU\":\"Puebla\",\"QT\":\"Quer\u00e9taro\",\"QR\":\"Quintana Roo\",\"SL\":\"San Luis Potos\u00ed\",\"SI\":\"Sinaloa\",\"SO\":\"Sonora\",\"TB\":\"Tabasco\",\"TM\":\"Tamaulipas\",\"TL\":\"Tlaxcala\",\"VE\":\"Veracruz\",\"YU\":\"Yucat\u00e1n\",\"ZA\":\"Zacatecas\"},\"MY\":{\"JHR\":\"Johor\",\"KDH\":\"Kedah\",\"KTN\":\"Kelantan\",\"LBN\":\"Labuan\",\"MLK\":\"Malacca (Melaka)\",\"NSN\":\"Negeri Sembilan\",\"PHG\":\"Pahang\",\"PNG\":\"Penang (Pulau Pinang)\",\"PRK\":\"Perak\",\"PLS\":\"Perlis\",\"SBH\":\"Sabah\",\"SWK\":\"Sarawak\",\"SGR\":\"Selangor\",\"TRG\":\"Terengganu\",\"PJY\":\"Putrajaya\",\"KUL\":\"Kuala Lumpur\"},\"NG\":{\"AB\":\"Abia\",\"FC\":\"Abuja\",\"AD\":\"Adamawa\",\"AK\":\"Akwa Ibom\",\"AN\":\"Anambra\",\"BA\":\"Bauchi\",\"BY\":\"Bayelsa\",\"BE\":\"Benue\",\"BO\":\"Borno\",\"CR\":\"Cross River\",\"DE\":\"Delta\",\"EB\":\"Ebonyi\",\"ED\":\"Edo\",\"EK\":\"Ekiti\",\"EN\":\"Enugu\",\"GO\":\"Gombe\",\"IM\":\"Imo\",\"JI\":\"Jigawa\",\"KD\":\"Kaduna\",\"KN\":\"Kano\",\"KT\":\"Katsina\",\"KE\":\"Kebbi\",\"KO\":\"Kogi\",\"KW\":\"Kwara\",\"LA\":\"Lagos\",\"NA\":\"Nasarawa\",\"NI\":\"Niger\",\"OG\":\"Ogun\",\"ON\":\"Ondo\",\"OS\":\"Osun\",\"OY\":\"Oyo\",\"PL\":\"Plateau\",\"RI\":\"Rivers\",\"SO\":\"Sokoto\",\"TA\":\"Taraba\",\"YO\":\"Yobe\",\"ZA\":\"Zamfara\"},\"NL\":[],\"NO\":[],\"NP\":{\"BAG\":\"Bagmati\",\"BHE\":\"Bheri\",\"DHA\":\"Dhaulagiri\",\"GAN\":\"Gandaki\",\"JAN\":\"Janakpur\",\"KAR\":\"Karnali\",\"KOS\":\"Koshi\",\"LUM\":\"Lumbini\",\"MAH\":\"Mahakali\",\"MEC\":\"Mechi\",\"NAR\":\"Narayani\",\"RAP\":\"Rapti\",\"SAG\":\"Sagarmatha\",\"SET\":\"Seti\"},\"NZ\":{\"NL\":\"Northland\",\"AK\":\"Auckland\",\"WA\":\"Waikato\",\"BP\":\"Bay of Plenty\",\"TK\":\"Taranaki\",\"GI\":\"Gisborne\",\"HB\":\"Hawke\u2019s Bay\",\"MW\":\"Manawatu-Wanganui\",\"WE\":\"Wellington\",\"NS\":\"Nelson\",\"MB\":\"Marlborough\",\"TM\":\"Tasman\",\"WC\":\"West Coast\",\"CT\":\"Canterbury\",\"OT\":\"Otago\",\"SL\":\"Southland\"},\"PE\":{\"CAL\":\"El Callao\",\"LMA\":\"Municipalidad Metropolitana de Lima\",\"AMA\":\"Amazonas\",\"ANC\":\"Ancash\",\"APU\":\"Apur\u00edmac\",\"ARE\":\"Arequipa\",\"AYA\":\"Ayacucho\",\"CAJ\":\"Cajamarca\",\"CUS\":\"Cusco\",\"HUV\":\"Huancavelica\",\"HUC\":\"Hu\u00e1nuco\",\"ICA\":\"Ica\",\"JUN\":\"Jun\u00edn\",\"LAL\":\"La Libertad\",\"LAM\":\"Lambayeque\",\"LIM\":\"Lima\",\"LOR\":\"Loreto\",\"MDD\":\"Madre de Dios\",\"MOQ\":\"Moquegua\",\"PAS\":\"Pasco\",\"PIU\":\"Piura\",\"PUN\":\"Puno\",\"SAM\":\"San Mart\u00edn\",\"TAC\":\"Tacna\",\"TUM\":\"Tumbes\",\"UCA\":\"Ucayali\"},\"PH\":{\"ABR\":\"Abra\",\"AGN\":\"Agusan del Norte\",\"AGS\":\"Agusan del Sur\",\"AKL\":\"Aklan\",\"ALB\":\"Albay\",\"ANT\":\"Antique\",\"APA\":\"Apayao\",\"AUR\":\"Aurora\",\"BAS\":\"Basilan\",\"BAN\":\"Bataan\",\"BTN\":\"Batanes\",\"BTG\":\"Batangas\",\"BEN\":\"Benguet\",\"BIL\":\"Biliran\",\"BOH\":\"Bohol\",\"BUK\":\"Bukidnon\",\"BUL\":\"Bulacan\",\"CAG\":\"Cagayan\",\"CAN\":\"Camarines Norte\",\"CAS\":\"Camarines Sur\",\"CAM\":\"Camiguin\",\"CAP\":\"Capiz\",\"CAT\":\"Catanduanes\",\"CAV\":\"Cavite\",\"CEB\":\"Cebu\",\"COM\":\"Compostela Valley\",\"NCO\":\"Cotabato\",\"DAV\":\"Davao del Norte\",\"DAS\":\"Davao del Sur\",\"DAC\":\"Davao Occidental\",\"DAO\":\"Davao Oriental\",\"DIN\":\"Dinagat Islands\",\"EAS\":\"Eastern Samar\",\"GUI\":\"Guimaras\",\"IFU\":\"Ifugao\",\"ILN\":\"Ilocos Norte\",\"ILS\":\"Ilocos Sur\",\"ILI\":\"Iloilo\",\"ISA\":\"Isabela\",\"KAL\":\"Kalinga\",\"LUN\":\"La Union\",\"LAG\":\"Laguna\",\"LAN\":\"Lanao del Norte\",\"LAS\":\"Lanao del Sur\",\"LEY\":\"Leyte\",\"MAG\":\"Maguindanao\",\"MAD\":\"Marinduque\",\"MAS\":\"Masbate\",\"MSC\":\"Misamis Occidental\",\"MSR\":\"Misamis Oriental\",\"MOU\":\"Mountain Province\",\"NEC\":\"Negros Occidental\",\"NER\":\"Negros Oriental\",\"NSA\":\"Northern Samar\",\"NUE\":\"Nueva Ecija\",\"NUV\":\"Nueva Vizcaya\",\"MDC\":\"Occidental Mindoro\",\"MDR\":\"Oriental Mindoro\",\"PLW\":\"Palawan\",\"PAM\":\"Pampanga\",\"PAN\":\"Pangasinan\",\"QUE\":\"Quezon\",\"QUI\":\"Quirino\",\"RIZ\":\"Rizal\",\"ROM\":\"Romblon\",\"WSA\":\"Samar\",\"SAR\":\"Sarangani\",\"SIQ\":\"Siquijor\",\"SOR\":\"Sorsogon\",\"SCO\":\"South Cotabato\",\"SLE\":\"Southern Leyte\",\"SUK\":\"Sultan Kudarat\",\"SLU\":\"Sulu\",\"SUN\":\"Surigao del Norte\",\"SUR\":\"Surigao del Sur\",\"TAR\":\"Tarlac\",\"TAW\":\"Tawi-Tawi\",\"ZMB\":\"Zambales\",\"ZAN\":\"Zamboanga del Norte\",\"ZAS\":\"Zamboanga del Sur\",\"ZSI\":\"Zamboanga Sibugay\",\"00\":\"Metro Manila\"},\"PK\":{\"JK\":\"Azad Kashmir\",\"BA\":\"Balochistan\",\"TA\":\"FATA\",\"GB\":\"Gilgit Baltistan\",\"IS\":\"Islamabad Capital Territory\",\"KP\":\"Khyber Pakhtunkhwa\",\"PB\":\"Punjab\",\"SD\":\"Sindh\"},\"PL\":[],\"PT\":[],\"PY\":{\"PY-ASU\":\"Asunci\u00f3n\",\"PY-1\":\"Concepci\u00f3n\",\"PY-2\":\"San Pedro\",\"PY-3\":\"Cordillera\",\"PY-4\":\"Guair\u00e1\",\"PY-5\":\"Caaguaz\u00fa\",\"PY-6\":\"Caazap\u00e1\",\"PY-7\":\"Itap\u00faa\",\"PY-8\":\"Misiones\",\"PY-9\":\"Paraguar\u00ed\",\"PY-10\":\"Alto Paran\u00e1\",\"PY-11\":\"Central\",\"PY-12\":\"\u00d1eembuc\u00fa\",\"PY-13\":\"Amambay\",\"PY-14\":\"Canindey\u00fa\",\"PY-15\":\"Presidente Hayes\",\"PY-16\":\"Alto Paraguay\",\"PY-17\":\"Boquer\u00f3n\"},\"RE\":[],\"RO\":{\"AB\":\"Alba\",\"AR\":\"Arad\",\"AG\":\"Arge\u0219\",\"BC\":\"Bac\u0103u\",\"BH\":\"Bihor\",\"BN\":\"Bistri\u021ba-N\u0103s\u0103ud\",\"BT\":\"Boto\u0219ani\",\"BR\":\"Br\u0103ila\",\"BV\":\"Bra\u0219ov\",\"B\":\"Bucure\u0219ti\",\"BZ\":\"Buz\u0103u\",\"CL\":\"C\u0103l\u0103ra\u0219i\",\"CS\":\"Cara\u0219-Severin\",\"CJ\":\"Cluj\",\"CT\":\"Constan\u021ba\",\"CV\":\"Covasna\",\"DB\":\"D\u00e2mbovi\u021ba\",\"DJ\":\"Dolj\",\"GL\":\"Gala\u021bi\",\"GR\":\"Giurgiu\",\"GJ\":\"Gorj\",\"HR\":\"Harghita\",\"HD\":\"Hunedoara\",\"IL\":\"Ialomi\u021ba\",\"IS\":\"Ia\u0219i\",\"IF\":\"Ilfov\",\"MM\":\"Maramure\u0219\",\"MH\":\"Mehedin\u021bi\",\"MS\":\"Mure\u0219\",\"NT\":\"Neam\u021b\",\"OT\":\"Olt\",\"PH\":\"Prahova\",\"SJ\":\"S\u0103laj\",\"SM\":\"Satu Mare\",\"SB\":\"Sibiu\",\"SV\":\"Suceava\",\"TR\":\"Teleorman\",\"TM\":\"Timi\u0219\",\"TL\":\"Tulcea\",\"VL\":\"V\u00e2lcea\",\"VS\":\"Vaslui\",\"VN\":\"Vrancea\"},\"RS\":[],\"SG\":[],\"SK\":[],\"SI\":[],\"TH\":{\"TH-37\":\"Amnat Charoen\",\"TH-15\":\"Ang Thong\",\"TH-14\":\"Ayutthaya\",\"TH-10\":\"Bangkok\",\"TH-38\":\"Bueng Kan\",\"TH-31\":\"Buri Ram\",\"TH-24\":\"Chachoengsao\",\"TH-18\":\"Chai Nat\",\"TH-36\":\"Chaiyaphum\",\"TH-22\":\"Chanthaburi\",\"TH-50\":\"Chiang Mai\",\"TH-57\":\"Chiang Rai\",\"TH-20\":\"Chonburi\",\"TH-86\":\"Chumphon\",\"TH-46\":\"Kalasin\",\"TH-62\":\"Kamphaeng Phet\",\"TH-71\":\"Kanchanaburi\",\"TH-40\":\"Khon Kaen\",\"TH-81\":\"Krabi\",\"TH-52\":\"Lampang\",\"TH-51\":\"Lamphun\",\"TH-42\":\"Loei\",\"TH-16\":\"Lopburi\",\"TH-58\":\"Mae Hong Son\",\"TH-44\":\"Maha Sarakham\",\"TH-49\":\"Mukdahan\",\"TH-26\":\"Nakhon Nayok\",\"TH-73\":\"Nakhon Pathom\",\"TH-48\":\"Nakhon Phanom\",\"TH-30\":\"Nakhon Ratchasima\",\"TH-60\":\"Nakhon Sawan\",\"TH-80\":\"Nakhon Si Thammarat\",\"TH-55\":\"Nan\",\"TH-96\":\"Narathiwat\",\"TH-39\":\"Nong Bua Lam Phu\",\"TH-43\":\"Nong Khai\",\"TH-12\":\"Nonthaburi\",\"TH-13\":\"Pathum Thani\",\"TH-94\":\"Pattani\",\"TH-82\":\"Phang Nga\",\"TH-93\":\"Phatthalung\",\"TH-56\":\"Phayao\",\"TH-67\":\"Phetchabun\",\"TH-76\":\"Phetchaburi\",\"TH-66\":\"Phichit\",\"TH-65\":\"Phitsanulok\",\"TH-54\":\"Phrae\",\"TH-83\":\"Phuket\",\"TH-25\":\"Prachin Buri\",\"TH-77\":\"Prachuap Khiri Khan\",\"TH-85\":\"Ranong\",\"TH-70\":\"Ratchaburi\",\"TH-21\":\"Rayong\",\"TH-45\":\"Roi Et\",\"TH-27\":\"Sa Kaeo\",\"TH-47\":\"Sakon Nakhon\",\"TH-11\":\"Samut Prakan\",\"TH-74\":\"Samut Sakhon\",\"TH-75\":\"Samut Songkhram\",\"TH-19\":\"Saraburi\",\"TH-91\":\"Satun\",\"TH-17\":\"Sing Buri\",\"TH-33\":\"Sisaket\",\"TH-90\":\"Songkhla\",\"TH-64\":\"Sukhothai\",\"TH-72\":\"Suphan Buri\",\"TH-84\":\"Surat Thani\",\"TH-32\":\"Surin\",\"TH-63\":\"Tak\",\"TH-92\":\"Trang\",\"TH-23\":\"Trat\",\"TH-34\":\"Ubon Ratchathani\",\"TH-41\":\"Udon Thani\",\"TH-61\":\"Uthai Thani\",\"TH-53\":\"Uttaradit\",\"TH-95\":\"Yala\",\"TH-35\":\"Yasothon\"},\"TR\":{\"TR01\":\"Adana\",\"TR02\":\"Ad\u0131yaman\",\"TR03\":\"Afyon\",\"TR04\":\"A\u011fr\u0131\",\"TR05\":\"Amasya\",\"TR06\":\"Ankara\",\"TR07\":\"Antalya\",\"TR08\":\"Artvin\",\"TR09\":\"Ayd\u0131n\",\"TR10\":\"Bal\u0131kesir\",\"TR11\":\"Bilecik\",\"TR12\":\"Bing\u00f6l\",\"TR13\":\"Bitlis\",\"TR14\":\"Bolu\",\"TR15\":\"Burdur\",\"TR16\":\"Bursa\",\"TR17\":\"\u00c7anakkale\",\"TR18\":\"\u00c7ank\u0131r\u0131\",\"TR19\":\"\u00c7orum\",\"TR20\":\"Denizli\",\"TR21\":\"Diyarbak\u0131r\",\"TR22\":\"Edirne\",\"TR23\":\"Elaz\u0131\u011f\",\"TR24\":\"Erzincan\",\"TR25\":\"Erzurum\",\"TR26\":\"Eski\u015fehir\",\"TR27\":\"Gaziantep\",\"TR28\":\"Giresun\",\"TR29\":\"G\u00fcm\u00fc\u015fhane\",\"TR30\":\"Hakkari\",\"TR31\":\"Hatay\",\"TR32\":\"Isparta\",\"TR33\":\"\u0130\u00e7el\",\"TR34\":\"\u0130stanbul\",\"TR35\":\"\u0130zmir\",\"TR36\":\"Kars\",\"TR37\":\"Kastamonu\",\"TR38\":\"Kayseri\",\"TR39\":\"K\u0131rklareli\",\"TR40\":\"K\u0131r\u015fehir\",\"TR41\":\"Kocaeli\",\"TR42\":\"Konya\",\"TR43\":\"K\u00fctahya\",\"TR44\":\"Malatya\",\"TR45\":\"Manisa\",\"TR46\":\"Kahramanmara\u015f\",\"TR47\":\"Mardin\",\"TR48\":\"Mu\u011fla\",\"TR49\":\"Mu\u015f\",\"TR50\":\"Nev\u015fehir\",\"TR51\":\"Ni\u011fde\",\"TR52\":\"Ordu\",\"TR53\":\"Rize\",\"TR54\":\"Sakarya\",\"TR55\":\"Samsun\",\"TR56\":\"Siirt\",\"TR57\":\"Sinop\",\"TR58\":\"Sivas\",\"TR59\":\"Tekirda\u011f\",\"TR60\":\"Tokat\",\"TR61\":\"Trabzon\",\"TR62\":\"Tunceli\",\"TR63\":\"\u015eanl\u0131urfa\",\"TR64\":\"U\u015fak\",\"TR65\":\"Van\",\"TR66\":\"Yozgat\",\"TR67\":\"Zonguldak\",\"TR68\":\"Aksaray\",\"TR69\":\"Bayburt\",\"TR70\":\"Karaman\",\"TR71\":\"K\u0131r\u0131kkale\",\"TR72\":\"Batman\",\"TR73\":\"\u015e\u0131rnak\",\"TR74\":\"Bart\u0131n\",\"TR75\":\"Ardahan\",\"TR76\":\"I\u011fd\u0131r\",\"TR77\":\"Yalova\",\"TR78\":\"Karab\u00fck\",\"TR79\":\"Kilis\",\"TR80\":\"Osmaniye\",\"TR81\":\"D\u00fczce\"},\"TZ\":{\"TZ01\":\"Arusha\",\"TZ02\":\"Dar es Salaam\",\"TZ03\":\"Dodoma\",\"TZ04\":\"Iringa\",\"TZ05\":\"Kagera\",\"TZ06\":\"Pemba North\",\"TZ07\":\"Zanzibar North\",\"TZ08\":\"Kigoma\",\"TZ09\":\"Kilimanjaro\",\"TZ10\":\"Pemba South\",\"TZ11\":\"Zanzibar South\",\"TZ12\":\"Lindi\",\"TZ13\":\"Mara\",\"TZ14\":\"Mbeya\",\"TZ15\":\"Zanzibar West\",\"TZ16\":\"Morogoro\",\"TZ17\":\"Mtwara\",\"TZ18\":\"Mwanza\",\"TZ19\":\"Coast\",\"TZ20\":\"Rukwa\",\"TZ21\":\"Ruvuma\",\"TZ22\":\"Shinyanga\",\"TZ23\":\"Singida\",\"TZ24\":\"Tabora\",\"TZ25\":\"Tanga\",\"TZ26\":\"Manyara\",\"TZ27\":\"Geita\",\"TZ28\":\"Katavi\",\"TZ29\":\"Njombe\",\"TZ30\":\"Simiyu\"},\"LK\":[],\"SE\":[],\"US\":{\"AL\":\"Alabama\",\"AK\":\"Alaska\",\"AZ\":\"Arizona\",\"AR\":\"Arkansas\",\"CA\":\"California\",\"CO\":\"Colorado\",\"CT\":\"Connecticut\",\"DE\":\"Delaware\",\"DC\":\"District Of Columbia\",\"FL\":\"Florida\",\"GA\":\"Georgia\",\"HI\":\"Hawaii\",\"ID\":\"Idaho\",\"IL\":\"Illinois\",\"IN\":\"Indiana\",\"IA\":\"Iowa\",\"KS\":\"Kansas\",\"KY\":\"Kentucky\",\"LA\":\"Louisiana\",\"ME\":\"Maine\",\"MD\":\"Maryland\",\"MA\":\"Massachusetts\",\"MI\":\"Michigan\",\"MN\":\"Minnesota\",\"MS\":\"Mississippi\",\"MO\":\"Missouri\",\"MT\":\"Montana\",\"NE\":\"Nebraska\",\"NV\":\"Nevada\",\"NH\":\"New Hampshire\",\"NJ\":\"New Jersey\",\"NM\":\"New Mexico\",\"NY\":\"New York\",\"NC\":\"North Carolina\",\"ND\":\"North Dakota\",\"OH\":\"Ohio\",\"OK\":\"Oklahoma\",\"OR\":\"Oregon\",\"PA\":\"Pennsylvania\",\"RI\":\"Rhode Island\",\"SC\":\"South Carolina\",\"SD\":\"South Dakota\",\"TN\":\"Tennessee\",\"TX\":\"Texas\",\"UT\":\"Utah\",\"VT\":\"Vermont\",\"VA\":\"Virginia\",\"WA\":\"Washington\",\"WV\":\"West Virginia\",\"WI\":\"Wisconsin\",\"WY\":\"Wyoming\",\"AA\":\"Armed Forces (AA)\",\"AE\":\"Armed Forces (AE)\",\"AP\":\"Armed Forces (AP)\"},\"VN\":[],\"YT\":[],\"ZA\":{\"EC\":\"Eastern Cape\",\"FS\":\"Free State\",\"GP\":\"Gauteng\",\"KZN\":\"KwaZulu-Natal\",\"LP\":\"Limpopo\",\"MP\":\"Mpumalanga\",\"NC\":\"Northern Cape\",\"NW\":\"North West\",\"WC\":\"Western Cape\"}}","password_strength":{"min_password_strength":3,"i18n_password_error":"Please enter a stronger password.","i18n_password_hint":"G\u1ee3i \u00fd: M\u1eadt kh\u1ea9u ph\u1ea3i c\u00f3 \u00edt nh\u1ea5t 12 k\u00fd t\u1ef1. \u0110\u1ec3 n\u00e2ng cao \u0111\u1ed9 b\u1ea3o m\u1eadt, s\u1eed d\u1ee5ng ch\u1eef in hoa, in th\u01b0\u1eddng, ch\u1eef s\u1ed1 v\u00e0 c\u00e1c k\u00fd t\u1ef1 \u0111\u1eb7c bi\u1ec7t nh\u01b0 ! &quot; ? $ % ^ &amp; )."}};
+/* ]]> */
+</script><script  data-wpmeteor-after="REORDER" data-minify="1" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/easy-login-woocommerce/xoo-form-fields-fw/assets/js/xoo-aff-js-32d2b9a9133a0692f3d4ccbaad83ae75.js' id='xoo-aff-js-js' defer></script><script  data-wpmeteor-after="REORDER" data-minify="1" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/easy-login-woocommerce/library/smooth-scrollbar/smooth-scrollbar-6a48305bbb5f514b02e4b5d28328e253.js' id='smooth-scrollbar-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='xoo-el-js-js-extra'>
+/* <![CDATA[ */
+var xoo_el_localize = {"adminurl":"https:\/\/ielts-thanhloan.com\/wp-admin\/admin-ajax.php","redirectDelay":"300","html":{"spinner":"<i class=\"fas fa-circle-notch spinner fa-spin\" aria-hidden=\"true\"><\/i>"},"autoOpenPopup":"no","autoOpenPopupOnce":"no","aoDelay":"500"};
+/* ]]> */
+</script><script  data-wpmeteor-after="REORDER" data-minify="1" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/easy-login-woocommerce/assets/js/xoo-el-js-32b28ac47e1d9e343532b07599a659c5.js' id='xoo-el-js-js' defer></script><script  data-wpmeteor-after="REORDER" data-minify="1" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/twist/assets/js/public-05a64fa956431d175346c374c853e3d6.js' id='wpgs-public-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='wpgs-public-js-after'>window.addEventListener('DOMContentLoaded', function() {
+(function( $ ) {
+  		'use strict';
+		$(document).ready(function(){
+
+		
+			
+			
+			$('.wpgs-thumb').slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				rtl: false,
+				
+				arrows: true,
+				prevArrow:'<span class="slick-prev slick-arrow" aria-label="prev"  ></span>',
+				nextArrow:'<span class="slick-next slick-arrow" aria-label="Next" ></span>',
+				speed:600,
+				infinite: true,
+				centerMode: false,
+				focusOnSelect: false,
+				
+				responsive: [
+					
+					{
+					breakpoint: 1025,
+					settings: {	
+						variableWidth: false,					
+						vertical: false,verticalSwiping: false,rtl: false,
+						slidesToShow: 4,
+						slidesToScroll: 1,
+						swipeToSlide :true,
+						
+					}
+					},
+					
+					{
+					breakpoint: 767,
+					settings: {						
+						variableWidth: false,
+						vertical: false,verticalSwiping: false,rtl: false,
+						slidesToShow: 4,
+						slidesToScroll: 1,
+						swipeToSlide :true,
+					}
+					}
+				
+				]
+
+			});
+			
+		
+			
+			
+			$('.wpgs-wrapper').hide();
+			$('.wpgs-wrapper').css("opacity", "1");
+			$('.wpgs-wrapper').fadeIn();
+			
+
+				
+		
+		});
+
+		})(jQuery);
+});</script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='rocket-preload-links-js-extra'>
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|\/check-out(.*)|\/cart|\/tai-khoan(.*)|\/wc-api\/v(.*)|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/ielts-thanhloan.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-includes/js/hoverIntent.min.js?ver=1.8.1' id='hoverIntent-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/themes/genesis/lib/js/menu/superfish.min.js?ver=1.7.10' id='superfish-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/themes/genesis/lib/js/menu/superfish.args.min.js?ver=3.3.3' id='superfish-args-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='paradise-responsive-menu-js-extra'>
+/* <![CDATA[ */
+var genesis_responsive_menu = {"mainMenu":"MENU","subMenu":"MENU","menuClasses":{"combine":[".nav-primary",".nav-header",".nav-secondary"]}};
+/* ]]> */
+</script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/themes/paradise/js/responsive-menus.min.js?ver=5.2.5' id='paradise-responsive-menu-js' defer></script><script  data-wpmeteor-after="REORDER" data-minify="1" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/themes/paradise/js/back-to-top-f0bfc4057e83adb1501d46150c58207c.js' id='to-top-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='xoo-wsc-main-js-js-extra'>
+/* <![CDATA[ */
+var xoo_wsc_params = {"adminurl":"https:\/\/ielts-thanhloan.com\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","qtyUpdateDelay":"500","notificationTime":"5000","html":{"successNotice":"<ul class=\"xoo-wsc-notices\"><li class=\"xoo-wsc-notice-success\"><span class=\"xoo-wsc-icon-check_circle\"><\/span>%s%<\/li><\/ul>","errorNotice":"<ul class=\"xoo-wsc-notices\"><li class=\"xoo-wsc-notice-error\"><span class=\"xoo-wsc-icon-cross\"><\/span>%s%<\/li><\/ul>"},"strings":{"maxQtyError":"Only %s% in stock","stepQtyError":"Quantity can only be purchased in multiple of %s%","calculateCheckout":"Please use checkout form to calculate shipping","couponEmpty":"Please enter promo code"},"nonces":{"update_shipping_method_nonce":"848afb320a"},"isCheckout":"","isCart":"","sliderAutoClose":"1","shippingEnabled":"1","couponsEnabled":"1","autoOpenCart":"yes","addedToCart":"","ajaxAddToCart":"yes","showBasket":"hide_empty","flyToCart":"no","flyToCartTime":"1500","productFlyClass":"","refreshCart":"no","fetchDelay":"200"};
+/* ]]> */
+</script><script  data-wpmeteor-after="REORDER" data-minify="1" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-side-cart-premium/assets/js/xoo-wsc-main-ac38bf2f205081e4bc16e38caff6978f.js' id='xoo-wsc-main-js-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-includes/js/imagesloaded.min.js?ver=4.1.4' id='imagesloaded-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/e-gallery/js/e-gallery.min.js?ver=1.2.0' id='elementor-gallery-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.2.1' id='elementor-pro-webpack-runtime-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.2.5' id='elementor-webpack-runtime-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.2.5' id='elementor-frontend-modules-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.2.1' id='elementor-sticky-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='elementor-pro-frontend-js-before'>
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/ielts-thanhloan.com\/wp-admin\/admin-ajax.php","nonce":"8cfb696500","urls":{"assets":"https:\/\/ielts-thanhloan.com\/wp-content\/plugins\/elementor-pro\/assets\/"},"i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"menu_cart":{"cart_page_url":"https:\/\/ielts-thanhloan.com\/cart","checkout_page_url":"https:\/\/ielts-thanhloan.com\/check-out"},"facebook_sdk":{"lang":"vi","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/ielts-thanhloan.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.2.1' id='elementor-pro-frontend-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6' id='swiper-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.2.5' id='share-link-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1' id='elementor-dialog-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Chia s\u1ebb tr\u00ean Facebook","shareOnTwitter":"Chia s\u1ebb tr\u00ean Twitter","pinIt":"Ghim n\u00f3","download":"T\u1ea3i xu\u1ed1ng","downloadImage":"T\u1ea3i h\u00ecnh \u1ea3nh","fullscreen":"To\u00e0n m\u00e0n h\u00ecnh","zoom":"Thu ph\u00f3ng","share":"Chia s\u1ebb","playVideo":"Ch\u01a1i Video","previous":"Previous","next":"Next","close":"\u0110\u00f3ng"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Thi\u1ebft b\u1ecb di \u0111\u1ed9ng","value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"direction":"max","is_enabled":false},"tablet":{"label":"M\u00e1y t\u00ednh b\u1ea3ng","value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1365,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1620,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"direction":"min","is_enabled":false}}},"version":"3.2.5","is_static":false,"experimentalFeatures":{"form-submissions":true},"urls":{"assets":"https:\/\/ielts-thanhloan.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","active_breakpoints":["viewport_mobile","viewport_tablet"],"lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":27598,"title":"IELTS%20Thanh%20Loan","excerpt":"","featuredImage":"https:\/\/ielts-thanhloan.com\/wp-content\/uploads\/2021\/04\/f93d41844806ba58e317.jpg"}};
+</script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.2.5' id='elementor-frontend-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js?ver=3.2.1' id='pro-preloaded-elements-handlers-js' defer></script><script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='https://ielts-thanhloan.com/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.2.5' id='preloaded-modules-js' defer></script><noscript><link rel='stylesheet' id='wpacu-combined-google-fonts-css' href='https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Roboto+Slab:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;subset=vietnamese&#038;display=swap' type='text/css' media='all' /></noscript><script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://ielts-thanhloan.com/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script></html>
